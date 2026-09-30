@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn English, discover amazing facts and test your knowledge with fun quizzes.">
+<title>Learn English & Amazing Facts</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#f5f7fb;color:#222;line-height:1.6}
+header{
+  background:linear-gradient(135deg,#4f46e5,#7c3aed);
+  color:#fff;padding:22px 16px;text-align:center
+}
+header h1{font-size:28px}
+header p{margin-top:6px}
+nav{
+  background:#fff;padding:12px 16px;box-shadow:0 2px 10px #ddd;
+  position:sticky;top:0;z-index:100;display:flex;justify-content:center;
+  gap:8px;flex-wrap:wrap
+}
+nav a{color:#333;text-decoration:none;font-weight:bold;padding:8px 12px;border-radius:8px}
+nav a:hover{background:#eef2ff;color:#4f46e5}
+.hero{
+  text-align:center;padding:70px 20px;
+  background:linear-gradient(135deg,#eef2ff,#faf5ff)
+}
+.hero h2{font-size:40px;color:#4f46e5;line-height:1.2}
+.hero p{margin:16px auto;max-width:700px;font-size:18px}
+.btn{
+  display:inline-block;background:#4f46e5;color:#fff;padding:13px 25px;
+  border-radius:30px;text-decoration:none;margin-top:12px;border:0;cursor:pointer;
+  font-weight:bold
+}
+.btn:hover{background:#3730a3}
+section{padding:55px 20px;max-width:1100px;margin:auto}
+section h2{text-align:center;margin-bottom:30px;color:#4f46e5}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{
+  background:#fff;padding:25px;border-radius:16px;box-shadow:0 4px 15px #ddd;
+  text-align:center;transition:.2s
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 8px 22px #d5d5d5}
+.card h3{margin:10px 0}
+.card p{line-height:1.6}
+.quiz{
+  background:#fff;max-width:650px;margin:auto;padding:28px;border-radius:16px;
+  box-shadow:0 4px 15px #ddd
+}
+.option{
+  display:block;width:100%;margin:10px 0;padding:13px;border:1px solid #ddd;
+  background:#fafafa;border-radius:9px;cursor:pointer;text-align:left;font-size:16px
+}
+.option:hover{background:#eef2ff;border-color:#818cf8}
+.option.correct{background:#dcfce7;border-color:#22c55e}
+.option.wrong{background:#fee2e2;border-color:#ef4444}
+#result{margin-top:18px;font-weight:bold;min-height:24px}
+.score{text-align:center;margin-top:14px;font-weight:bold;color:#4f46e5}
+.tip{
+  margin-top:18px;padding:15px;border-radius:10px;background:#eef2ff;
+  text-align:center
+}
+footer{background:#171717;color:#fff;text-align:center;padding:35px 20px}
+.social{margin-top:15px}
+.social a{color:#fff;margin:0 8px;text-decoration:none}
+.social a:hover{text-decoration:underline}
+.backtop{
+  position:fixed;right:18px;bottom:18px;width:44px;height:44px;border:0;
+  border-radius:50%;background:#4f46e5;color:#fff;font-size:20px;cursor:pointer;
+  display:none;box-shadow:0 4px 12px #aaa
+}
+@media(max-width:600px){
+  header h1{font-size:22px}
+  .hero{padding:50px 16px}
+  .hero h2{font-size:29px}
+  nav{gap:2px}
+  nav a{font-size:13px;padding:7px 8px}
+  section{padding:42px 16px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>📚 Learn English & Amazing Facts</h1>
+  <p>Learn English • Discover Amazing Facts • Test Your Knowledge</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#english">English</a>
+  <a href="#facts">Facts</a>
+  <a href="#quiz">Quiz</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+  <h2>Learn Something Amazing Every Day! 🚀</h2>
+  <p>
+    Improve your English, learn useful words and sentences,
+    discover interesting facts and challenge your brain with fun quizzes.
+  </p>
+  <a href="#quiz" class="btn">Take Today's Quiz</a>
+</section>
+
+<section id="english">
+  <h2>📚 English Learning</h2>
+  <div class="cards">
+    <div class="card">
+      <div style="font-size:35px">🗣️</div>
+      <h3>Spoken English</h3>
+      <p>Learn simple English sentences for everyday conversations.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:35px">✏️</div>
+      <h3>Grammar</h3>
+      <p>Learn grammar rules with easy examples and simple explanations.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:35px">🔤</div>
+      <h3>Vocabulary</h3>
+      <p>Build your vocabulary with useful English words and meanings.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:35px">💬</div>
+      <h3>Daily Sentences</h3>
+      <p>Practice useful English sentences every day.</p>
+    </div>
+  </div>
+</section>
+
+<section id="facts">
+  <h2>🌍 Amazing Facts</h2>
+  <div class="cards">
+    <div class="card"><h3>🚀 Space</h3><p>The Sun is a star at the center of our solar system.</p></div>
+    <div class="card"><h3>🐘 Animals</h3><p>Elephants use their trunks for breathing, smelling and grabbing objects.</p></div>
+    <div class="card"><h3>🔬 Science</h3><p>Water can naturally exist as a solid, liquid and gas.</p></div>
+    <div class="card"><h3>🌎 World</h3><p>Earth is the third planet from the Sun.</p></div>
+  </div>
+</section>
+
+<section id="quiz">
+  <h2>🧠 Today's Quiz</h2>
+  <div class="quiz">
+    <h3 id="question">Which sentence is correct?</h3>
+
+    <button class="option" onclick="answer(this,false)">A) He go to school.</button>
+    <button class="option" onclick="answer(this,true)">B) He goes to school.</button>
+    <button class="option" onclick="answer(this,false)">C) He going to school.</button>
+    <button class="option" onclick="answer(this,false)">D) He gone to school.</button>
+
+    <p id="result"></p>
+    <p class="score">Score: <span id="score">0</span></p>
+    <div class="tip">💡 Tip: With “he”, “she” or “it”, a present-simple verb often takes <b>-s/-es</b>.</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>📞 Contact Us</h2>
+  <div class="card">
+    <p>Follow our social media pages for daily English lessons and amazing facts.</p>
+    <a href="#" class="btn" onclick="return false;">Follow Us</a>
+  </div>
+</section>
+
+<footer>
+  <h3>Learn English & Amazing Facts</h3>
+  <p>Learn • Practice • Discover • Grow</p>
+  <div class="social">
+    <a href="#" onclick="return false;">Facebook</a>
+    <a href="#" onclick="return false;">Instagram</a>
+    <a href="#" onclick="return false;">YouTube</a>
+  </div>
+  <p style="margin-top:20px;">© 2026 Learn English & Amazing Facts</p>
+</footer>
+
+<button class="backtop" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+let score = 0;
+let answered = false;
+
+function answer(button, correct){
+  if(answered) return;
+  answered = true;
+
+  const result = document.getElementById("result");
+  const buttons = document.querySelectorAll(".option");
+
+  buttons.forEach(b => b.disabled = true);
+
+  if(correct){
+    score++;
+    button.classList.add("correct");
+    result.textContent = "✅ Correct! Well done!";
+    result.style.color = "green";
+  }else{
+    button.classList.add("wrong");
+    result.textContent = "❌ Try again! The correct answer is B.";
+    result.style.color = "red";
+    buttons[1].classList.add("correct");
+  }
+
+  document.getElementById("score").textContent = score;
+}
+
+window.addEventListener("scroll", function(){
+  document.getElementById("backTop").style.display =
+    window.scrollY > 300 ? "block" : "none";
+});
+</script>
+
+</body>
+</html>
