@@ -1,1030 +1,1090 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="sVmUWQIDhJOkeMyHiIEUMv7dI8L9bCLRFJ6z2mkmavE">
 
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="sVmUWQIDhJOkeMyHiIEUMv7dI8L9bCLRFJ6z2mkmavE">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn English & Amazing Facts</title>
 
-    <!-- SEO -->
-    <title>Learn English & Amazing Facts</title>
+<meta name="description" content="Learn English grammar, spoken English, vocabulary, mathematics, science, GK, quizzes and amazing facts in a simple and fun way.">
 
-    <meta name="description" content="Learn English with grammar, vocabulary, quizzes, math, true or false questions, fill in the blanks, science, universe and amazing facts.">
+<meta name="keywords" content="English learning, English grammar, spoken English, vocabulary, math, science, GK, quiz, amazing facts, universe">
 
-    <meta name="keywords" content="Learn English, English Grammar, English Vocabulary, English Quiz, Math Quiz, GK Quiz, True False, Fill in the Blanks, Science Facts, Universe Facts, Amazing Facts">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Learn English & Amazing Facts">
 
-    <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arifkhan543.github.io/learn-english-amazing-facts-/">
 
-    <meta name="author" content="Learn English & Amazing Facts">
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-    <link rel="canonical" href="https://arifkhan543.github.io/learn-english-amazing-facts-/">
+body{
+    font-family:Arial, sans-serif;
+    background:#f2f6fc;
+    color:#222;
+    line-height:1.7;
+}
 
-    <style>
+header{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    text-align:center;
+    padding:55px 20px;
+}
 
-        * {
-            box-sizing: border-box;
-        }
+.logo{
+    font-size:55px;
+    margin-bottom:15px;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+header h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f7fb;
-            color: #333;
-            line-height: 1.7;
-        }
+header p{
+    font-size:19px;
+    max-width:800px;
+    margin:auto;
+}
 
-        header {
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
-            color: white;
-            text-align: center;
-            padding: 55px 20px;
-        }
+nav{
+    background:#111827;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    padding:14px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-        header .logo {
-            font-size: 55px;
-        }
+nav button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    padding:10px 14px;
+    cursor:pointer;
+    border-radius:8px;
+}
 
-        header h1 {
-            margin: 10px 0;
-            font-size: 42px;
-        }
+nav button:hover{
+    background:#2563eb;
+}
 
-        header p {
-            font-size: 20px;
-            margin: 10px auto;
-            max-width: 800px;
-        }
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px 15px 50px;
+}
 
-        nav {
-            background: #111827;
-            padding: 15px 10px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+.section{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    margin:25px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 8px;
-            display: inline-block;
-        }
+.section h2{
+    color:#2563eb;
+    font-size:30px;
+    margin-bottom:15px;
+}
 
-        nav a:hover {
-            color: #60a5fa;
-        }
+.section h3{
+    color:#7c3aed;
+    margin-top:20px;
+    margin-bottom:8px;
+}
 
-        main {
-            max-width: 1100px;
-            margin: auto;
-            padding: 25px 15px;
-        }
+.hero{
+    text-align:center;
+}
 
-        section {
-            margin-bottom: 40px;
-            scroll-margin-top: 70px;
-        }
+.hero h2{
+    font-size:34px;
+}
 
-        .intro {
-            background: white;
-            text-align: center;
-            padding: 40px 20px;
-            border-radius: 18px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
+.hero p{
+    font-size:18px;
+}
 
-        .intro h2 {
-            color: #2563eb;
-            font-size: 32px;
-        }
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+    margin-top:20px;
+}
 
-        .section-title {
-            text-align: center;
-            color: #1e3a8a;
-            font-size: 30px;
-            margin-bottom: 25px;
-        }
+.card{
+    background:#f8fafc;
+    border:2px solid #e5e7eb;
+    border-radius:15px;
+    padding:22px;
+    text-align:center;
+    cursor:pointer;
+    transition:0.25s;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-        }
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    border-color:#2563eb;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-        }
+.card .icon{
+    font-size:40px;
+    margin-bottom:8px;
+}
 
-        .card h3 {
-            color: #2563eb;
-            margin-top: 0;
-        }
+.card h3{
+    margin:5px 0;
+    color:#1d4ed8;
+}
 
-        .card p {
-            margin-bottom: 8px;
-        }
+.card p{
+    color:#555;
+}
 
-        .quiz-box {
-            background: white;
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            margin-bottom: 20px;
-        }
+.lesson{
+    display:none;
+    background:#ffffff;
+    border-radius:18px;
+    padding:30px;
+    margin:25px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
 
-        .question {
-            background: #f8fafc;
-            border-left: 5px solid #2563eb;
-            padding: 18px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
+.lesson.active{
+    display:block;
+}
 
-        .question h3 {
-            color: #1e3a8a;
-            margin-top: 0;
-        }
+.lesson h2{
+    color:#2563eb;
+    margin-bottom:15px;
+}
 
-        .option {
-            background: white;
-            border: 1px solid #ddd;
-            padding: 10px 12px;
-            margin: 8px 0;
-            border-radius: 8px;
-        }
+.lesson h3{
+    color:#7c3aed;
+    margin-top:22px;
+}
 
-        .option:hover {
-            background: #eff6ff;
-        }
+.example{
+    background:#eff6ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    margin:12px 0;
+    border-radius:8px;
+}
 
-        .fact {
-            background: white;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        }
+.tip{
+    background:#ecfdf5;
+    border-left:5px solid #10b981;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
 
-        .challenge {
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
-            color: white;
-            padding: 35px 20px;
-            text-align: center;
-            border-radius: 18px;
-        }
+.question{
+    background:#f8fafc;
+    padding:18px;
+    border-radius:12px;
+    margin:15px 0;
+    border:1px solid #ddd;
+}
 
-        .challenge h2 {
-            margin-top: 0;
-        }
+.option{
+    display:block;
+    background:white;
+    border:1px solid #ddd;
+    padding:10px;
+    margin:7px 0;
+    border-radius:7px;
+}
 
-        .cta {
-            display: inline-block;
-            background: white;
-            color: #2563eb;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+.back{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:11px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-bottom:20px;
+    font-weight:bold;
+}
 
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 30px 15px;
-            margin-top: 30px;
-        }
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
 
-        footer p {
-            margin: 6px;
-        }
+footer p{
+    margin:5px;
+}
 
-        @media (max-width: 600px) {
+.hidden{
+    display:none;
+}
 
-            header {
-                padding: 40px 15px;
-            }
+ul{
+    padding-left:25px;
+}
 
-            header h1 {
-                font-size: 30px;
-            }
+strong{
+    color:#1d4ed8;
+}
 
-            header p {
-                font-size: 17px;
-            }
+@media(max-width:600px){
+    header h1{
+        font-size:32px;
+    }
 
-            nav {
-                padding: 12px 5px;
-            }
+    header p{
+        font-size:16px;
+    }
 
-            nav a {
-                margin: 4px;
-                font-size: 14px;
-            }
+    .section{
+        padding:22px;
+    }
 
-            .section-title {
-                font-size: 26px;
-            }
+    .section h2{
+        font-size:25px;
+    }
 
-            .intro h2 {
-                font-size: 27px;
-            }
-
-        }
-
-    </style>
-
+    nav button{
+        font-size:14px;
+        padding:8px 9px;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
-
-<!-- HEADER -->
-
 <header>
-
-    <div class="logo">📚🌍💡</div>
-
+    <div class="logo">📚 🌎 💡</div>
     <h1>Learn English & Amazing Facts</h1>
-
     <p>
-        Improve Your English • Learn New Words • Test Your Knowledge • Discover Amazing Facts
+        Improve Your English • Learn New Words • Practice Math •
+        Explore Science • Discover Amazing Facts
     </p>
-
 </header>
 
-
-<!-- NAVIGATION -->
-
 <nav>
-
-    <a href="#home">Home</a>
-    <a href="#english">English</a>
-    <a href="#vocabulary">Vocabulary</a>
-    <a href="#quiz">Quiz</a>
-    <a href="#math">Math</a>
-    <a href="#facts">Facts</a>
-    <a href="#science">Science</a>
-    <a href="#space">Universe</a>
-    <a href="#contact">Contact</a>
-
+    <button onclick="showHome()">Home</button>
+    <button onclick="showCategory('grammar')">Grammar</button>
+    <button onclick="showCategory('spoken')">Spoken English</button>
+    <button onclick="showCategory('vocabulary')">Vocabulary</button>
+    <button onclick="showCategory('science')">Science</button>
+    <button onclick="showCategory('math')">Math</button>
+    <button onclick="showCategory('gk')">GK</button>
+    <button onclick="showCategory('quiz')">Quiz</button>
+    <button onclick="showCategory('universe')">Universe</button>
 </nav>
 
-
-<main>
-
+<main class="container">
 
 <!-- HOME -->
 
-<section id="home">
+<div id="home" class="section hero">
+    <h2>Welcome to Learn English & Amazing Facts</h2>
 
-    <div class="intro">
+    <p>
+        Learn English easily with grammar lessons, spoken English,
+        vocabulary, mathematics, science, general knowledge,
+        quizzes and amazing facts.
+    </p>
 
-        <h2>Welcome to Learn English & Amazing Facts</h2>
-
-        <p>
-            Learn English easily with useful vocabulary,
-            grammar lessons, spoken English, daily sentences,
-            quizzes and interesting facts.
-        </p>
-
-        <p>
-            Learn something new every day and improve your knowledge.
-        </p>
-
+    <div class="tip">
+        <strong>How to use this website:</strong><br>
+        Tap any topic below and start learning!
     </div>
 
-</section>
+    <div class="cards">
 
-
-<!-- ENGLISH LEARNING -->
-
-<section id="english">
-
-    <h2 class="section-title">🇬🇧 English Learning</h2>
-
-    <div class="grid">
-
-        <div class="card">
-
-            <h3>🗣️ Spoken English</h3>
-
-            <p>
-                Learn simple English sentences for everyday conversations.
-            </p>
-
-            <p>
-                Example: How are you? I am fine.
-            </p>
-
+        <div class="card" onclick="showCategory('grammar')">
+            <div class="icon">📘</div>
+            <h3>Grammar</h3>
+            <p>Learn English grammar step by step.</p>
         </div>
 
-
-        <div class="card">
-
-            <h3>📖 English Grammar</h3>
-
-            <p>
-                Learn articles, prepositions, verbs, tenses,
-                pronouns and sentence structures.
-            </p>
-
+        <div class="card" onclick="showCategory('spoken')">
+            <div class="icon">🗣️</div>
+            <h3>Spoken English</h3>
+            <p>Learn useful daily English sentences.</p>
         </div>
 
-
-        <div class="card">
-
-            <h3>✍️ Daily English</h3>
-
-            <p>
-                Practice useful English sentences every day.
-            </p>
-
-            <p>
-                Practice makes your English better.
-            </p>
-
+        <div class="card" onclick="showCategory('vocabulary')">
+            <div class="icon">📖</div>
+            <h3>Vocabulary</h3>
+            <p>Learn new English words and meanings.</p>
         </div>
 
+        <div class="card" onclick="showCategory('science')">
+            <div class="icon">🔬</div>
+            <h3>Science</h3>
+            <p>Explore science in a simple way.</p>
+        </div>
 
-        <div class="card">
+        <div class="card" onclick="showCategory('math')">
+            <div class="icon">➗</div>
+            <h3>Math</h3>
+            <p>Practice mathematics easily.</p>
+        </div>
 
-            <h3>🎯 Grammar Practice</h3>
+        <div class="card" onclick="showCategory('gk')">
+            <div class="icon">🌍</div>
+            <h3>General Knowledge</h3>
+            <p>Discover useful GK facts.</p>
+        </div>
 
-            <p>
-                Test your English grammar with interesting questions
-                and quick challenges.
-            </p>
+        <div class="card" onclick="showCategory('quiz')">
+            <div class="icon">🎯</div>
+            <h3>Quiz</h3>
+            <p>Test your knowledge.</p>
+        </div>
 
+        <div class="card" onclick="showCategory('universe')">
+            <div class="icon">🌌</div>
+            <h3>Universe</h3>
+            <p>Explore planets, stars and space.</p>
         </div>
 
     </div>
+</div>
 
-</section>
+
+<!-- GRAMMAR -->
+
+<div id="grammar" class="lesson">
+
+<button class="back" onclick="showHome()">← Back to Home</button>
+
+<h2>📘 English Grammar</h2>
+
+<p>
+Grammar helps us make correct English sentences.
+Choose a topic and learn it with examples.
+</p>
+
+<div class="cards">
+
+<div class="card" onclick="showLesson('articles')">
+<div class="icon">A</div>
+<h3>Articles</h3>
+<p>A, An and The</p>
+</div>
+
+<div class="card" onclick="showLesson('pronouns')">
+<div class="icon">👤</div>
+<h3>Pronouns</h3>
+<p>I, You, He, She, It, They</p>
+</div>
+
+<div class="card" onclick="showLesson('prepositions')">
+<div class="icon">📍</div>
+<h3>Prepositions</h3>
+<p>In, On, At, Under, Over</p>
+</div>
+
+<div class="card" onclick="showLesson('tense')">
+<div class="icon">⏰</div>
+<h3>Tense</h3>
+<p>Present, Past and Future</p>
+</div>
+
+<div class="card" onclick="showLesson('verbs')">
+<div class="icon">⚡</div>
+<h3>Verbs</h3>
+<p>V1, V2 and V3</p>
+</div>
+
+<div class="card" onclick="showLesson('am_is_are')">
+<div class="icon">🔤</div>
+<h3>Am / Is / Are</h3>
+<p>Learn their correct use.</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- ARTICLES -->
+
+<div id="articles" class="lesson">
+
+<button class="back" onclick="showCategory('grammar')">← Grammar</button>
+
+<h2>📚 Articles: A, An and The</h2>
+
+<h3>A</h3>
+<p>Use <strong>A</strong> before a singular word that begins with a consonant sound.</p>
+
+<div class="example">
+A boy.<br>
+A cat.<br>
+A book.
+</div>
+
+<h3>An</h3>
+<p>Use <strong>An</strong> before a singular word that begins with a vowel sound.</p>
+
+<div class="example">
+An apple.<br>
+An egg.<br>
+An orange.
+</div>
+
+<h3>The</h3>
+<p>Use <strong>The</strong> when talking about a particular person, place or thing.</p>
+
+<div class="example">
+The sun is hot.<br>
+The book is on the table.
+</div>
+
+<div class="tip">
+<strong>Practice:</strong> ___ apple, ___ boy, ___ sun.
+</div>
+
+</div>
+
+
+<!-- PRONOUNS -->
+
+<div id="pronouns" class="lesson">
+
+<button class="back" onclick="showCategory('grammar')">← Grammar</button>
+
+<h2>👤 Pronouns</h2>
+
+<p>
+A pronoun is a word used instead of a noun.
+</p>
+
+<div class="example">
+Rahul is a boy. <strong>He</strong> is a boy.
+</div>
+
+<h3>Common Pronouns</h3>
+
+<ul>
+<li>I</li>
+<li>You</li>
+<li>He</li>
+<li>She</li>
+<li>It</li>
+<li>We</li>
+<li>They</li>
+</ul>
+
+<div class="tip">
+Example: Rina is a girl. <strong>She</strong> is a girl.
+</div>
+
+</div>
+
+
+<!-- PREPOSITIONS -->
+
+<div id="prepositions" class="lesson">
+
+<button class="back" onclick="showCategory('grammar')">← Grammar</button>
+
+<h2>📍 Prepositions</h2>
+
+<p>
+Prepositions show the relationship between words.
+</p>
+
+<div class="example">
+The book is <strong>on</strong> the table.<br>
+The cat is <strong>under</strong> the table.<br>
+He is <strong>in</strong> the room.<br>
+She is <strong>at</strong> school.
+</div>
+
+<h3>Common Prepositions</h3>
+
+<ul>
+<li>in</li>
+<li>on</li>
+<li>at</li>
+<li>under</li>
+<li>over</li>
+<li>between</li>
+<li>behind</li>
+<li>beside</li>
+<li>with</li>
+<li>from</li>
+<li>to</li>
+</ul>
+
+</div>
+
+
+<!-- TENSE -->
+
+<div id="tense" class="lesson">
+
+<button class="back" onclick="showCategory('grammar')">← Grammar</button>
+
+<h2>⏰ Tense</h2>
+
+<p>Tense tells us when an action happens.</p>
+
+<h3>Present Tense</h3>
+
+<div class="example">
+I play football.<br>
+She reads a book.
+</div>
+
+<h3>Past Tense</h3>
+
+<div class="example">
+I played football.<br>
+She read a book.
+</div>
+
+<h3>Future Tense</h3>
+
+<div class="example">
+I will play football.<br>
+She will read a book.
+</div>
+
+</div>
+
+
+<!-- VERBS -->
+
+<div id="verbs" class="lesson">
+
+<button class="back" onclick="showCategory('grammar')">← Grammar</button>
+
+<h2>⚡ Verbs</h2>
+
+<p>A verb usually shows an action or state.</p>
+
+<div class="example">
+Go → Went → Gone<br>
+Eat → Ate → Eaten<br>
+Write → Wrote → Written<br>
+See → Saw → Seen
+</div>
+
+<h3>V1</h3>
+<p>Base form: go, eat, write</p>
+
+<h3>V2</h3>
+<p>Past form: went, ate, wrote</p>
+
+<h3>V3</h3>
+<p>Past participle: gone, eaten, written</p>
+
+</div>
+
+
+<!-- AM IS ARE -->
+
+<div id="am_is_are" class="lesson">
+
+<button class="back" onclick="showCategory('grammar')">← Grammar</button>
+
+<h2>🔤 Am / Is / Are</h2>
+
+<div class="example">
+I <strong>am</strong> a student.<br>
+He <strong>is</strong> happy.<br>
+She <strong>is</strong> a teacher.<br>
+They <strong>are</strong> friends.
+</div>
+
+<h3>Remember</h3>
+
+<ul>
+<li>I → am</li>
+<li>He → is</li>
+<li>She → is</li>
+<li>It → is</li>
+<li>You → are</li>
+<li>We → are</li>
+<li>They → are</li>
+</ul>
+
+</div>
+
+
+<!-- SPOKEN ENGLISH -->
+
+<div id="spoken" class="lesson">
+
+<button class="back" onclick="showHome()">← Home</button>
+
+<h2>🗣️ Spoken English</h2>
+
+<p>Learn useful English for everyday conversations.</p>
+
+<div class="cards">
+
+<div class="card" onclick="showLesson('daily_sentences')">
+<div class="icon">💬</div>
+<h3>Daily Sentences</h3>
+<p>Useful sentences for everyday life.</p>
+</div>
+
+<div class="card" onclick="showLesson('introduction')">
+<div class="icon">🙋</div>
+<h3>Self Introduction</h3>
+<p>How to introduce yourself.</p>
+</div>
+
+<div class="card" onclick="showLesson('conversation')">
+<div class="icon">🗨️</div>
+<h3>Conversation</h3>
+<p>Simple English conversations.</p>
+</div>
+
+<div class="card" onclick="showLesson('questions')">
+<div class="icon">❓</div>
+<h3>Common Questions</h3>
+<p>Questions and useful answers.</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- DAILY SENTENCES -->
+
+<div id="daily_sentences" class="lesson">
+
+<button class="back" onclick="showCategory('spoken')">← Spoken English</button>
+
+<h2>💬 Daily English Sentences</h2>
+
+<div class="example">
+Good morning.<br>
+How are you?<br>
+I am fine.<br>
+What are you doing?<br>
+Where are you going?<br>
+Please wait.<br>
+Come with me.<br>
+I don't know.<br>
+I understand.<br>
+See you tomorrow.
+</div>
+
+<div class="tip">
+Practice these sentences every day to improve your speaking.
+</div>
+
+</div>
+
+
+<!-- INTRODUCTION -->
+
+<div id="introduction" class="lesson">
+
+<button class="back" onclick="showCategory('spoken')">← Spoken English</button>
+
+<h2>🙋 Self Introduction</h2>
+
+<p>You can introduce yourself in a simple way:</p>
+
+<div class="example">
+Hello! My name is ______.<br>
+I am from ______.<br>
+I am a student.<br>
+I like learning new things.<br>
+My favorite subject is ______.<br>
+Nice to meet you.
+</div>
+
+</div>
+
+
+<!-- CONVERSATION -->
+
+<div id="conversation" class="lesson">
+
+<button class="back" onclick="showCategory('spoken')">← Spoken English</button>
+
+<h2>🗨️ Simple Conversation</h2>
+
+<div class="example">
+<strong>A:</strong> Hello! How are you?<br>
+<strong>B:</strong> I am fine. Thank you.<br><br>
+
+<strong>A:</strong> What are you doing?<br>
+<strong>B:</strong> I am studying English.<br><br>
+
+<strong>A:</strong> That's great!<br>
+<strong>B:</strong> Thank you.
+</div>
+
+</div>
+
+
+<!-- QUESTIONS -->
+
+<div id="questions" class="lesson">
+
+<button class="back" onclick="showCategory('spoken')">← Spoken English</button>
+
+<h2>❓ Common Questions</h2>
+
+<div class="example">
+<strong>What is your name?</strong><br>
+My name is ______.
+</div>
+
+<div class="example">
+<strong>Where are you from?</strong><br>
+I am from ______.
+</div>
+
+<div class="example">
+<strong>What do you do?</strong><br>
+I am a student.
+</div>
+
+<div class="example">
+<strong>What is your favorite subject?</strong><br>
+My favorite subject is ______.
+</div>
+
+</div>
 
 
 <!-- VOCABULARY -->
 
-<section id="vocabulary">
+<div id="vocabulary" class="lesson">
 
-    <h2 class="section-title">📚 English Vocabulary</h2>
+<button class="back" onclick="showHome()">← Home</button>
 
-    <div class="grid">
+<h2>📖 Vocabulary</h2>
 
-        <div class="card">
+<div class="cards">
 
-            <h3>Happy</h3>
+<div class="card" onclick="showLesson('common_words')">
+<div class="icon">🔤</div>
+<h3>Common Words</h3>
+<p>Useful everyday words.</p>
+</div>
 
-            <p><strong>Meaning:</strong> Feeling pleasure or joy.</p>
+<div class="card" onclick="showLesson('synonyms')">
+<div class="icon">🔄</div>
+<h3>Synonyms</h3>
+<p>Words with similar meanings.</p>
+</div>
 
-            <p><strong>Example:</strong> She is happy today.</p>
+<div class="card" onclick="showLesson('antonyms')">
+<div class="icon">↔️</div>
+<h3>Antonyms</h3>
+<p>Opposite words.</p>
+</div>
 
-        </div>
+</div>
+</div>
 
 
-        <div class="card">
+<!-- COMMON WORDS -->
 
-            <h3>Brave</h3>
+<div id="common_words" class="lesson">
 
-            <p><strong>Meaning:</strong> Not afraid of danger.</p>
+<button class="back" onclick="showCategory('vocabulary')">← Vocabulary</button>
 
-            <p><strong>Example:</strong> He is a brave boy.</p>
+<h2>🔤 Common English Words</h2>
 
-        </div>
+<div class="example">
+Happy = আনন্দিত<br>
+Beautiful = সুন্দর<br>
+Brave = সাহসী<br>
+Quick = দ্রুত<br>
+Easy = সহজ<br>
+Difficult = কঠিন<br>
+Important = গুরুত্বপূর্ণ<br>
+Amazing = আশ্চর্যজনক
+</div>
 
+</div>
 
-        <div class="card">
 
-            <h3>Beautiful</h3>
+<!-- SYNONYMS -->
 
-            <p><strong>Meaning:</strong> Very attractive or pleasing.</p>
+<div id="synonyms" class="lesson">
 
-            <p><strong>Example:</strong> The garden is beautiful.</p>
+<button class="back" onclick="showCategory('vocabulary')">← Vocabulary</button>
 
-        </div>
+<h2>🔄 Synonyms</h2>
 
+<div class="example">
+Big → Large<br>
+Small → Little<br>
+Happy → Glad<br>
+Fast → Quick<br>
+Smart → Clever<br>
+Begin → Start
+</div>
 
-        <div class="card">
+</div>
 
-            <h3>Important</h3>
 
-            <p><strong>Meaning:</strong> Having great value.</p>
+<!-- ANTONYMS -->
 
-            <p><strong>Example:</strong> Education is important.</p>
+<div id="antonyms" class="lesson">
 
-        </div>
+<button class="back" onclick="showCategory('vocabulary')">← Vocabulary</button>
 
-    </div>
+<h2>↔️ Antonyms</h2>
 
-</section>
+<div class="example">
+Big ↔ Small<br>
+Hot ↔ Cold<br>
+Day ↔ Night<br>
+Good ↔ Bad<br>
+Fast ↔ Slow<br>
+Happy ↔ Sad
+</div>
 
-
-<!-- ENGLISH QUIZ -->
-
-<section id="quiz">
-
-    <h2 class="section-title">🎯 English Quiz</h2>
-
-    <div class="quiz-box">
-
-
-        <div class="question">
-
-            <h3>Question 1</h3>
-
-            <p><strong>She ___ to school every day.</strong></p>
-
-            <div class="option">A) go</div>
-            <div class="option">B) goes</div>
-            <div class="option">C) going</div>
-            <div class="option">D) gone</div>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>Question 2</h3>
-
-            <p><strong>I ___ a book yesterday.</strong></p>
-
-            <div class="option">A) buy</div>
-            <div class="option">B) buys</div>
-            <div class="option">C) bought</div>
-            <div class="option">D) buying</div>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>Question 3</h3>
-
-            <p><strong>He is ___ honest man.</strong></p>
-
-            <div class="option">A) a</div>
-            <div class="option">B) an</div>
-            <div class="option">C) the</div>
-            <div class="option">D) no article</div>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>Question 4</h3>
-
-            <p><strong>The cat is ___ the table.</strong></p>
-
-            <div class="option">A) under</div>
-            <div class="option">B) at</div>
-            <div class="option">C) from</div>
-            <div class="option">D) to</div>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>Question 5</h3>
-
-            <p><strong>What is the opposite of "Hot"?</strong></p>
-
-            <div class="option">A) Warm</div>
-            <div class="option">B) Cold</div>
-            <div class="option">C) Heat</div>
-            <div class="option">D) Fire</div>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>Question 6</h3>
-
-            <p><strong>Which word is a noun?</strong></p>
-
-            <div class="option">A) Beautiful</div>
-            <div class="option">B) Quickly</div>
-            <div class="option">C) Teacher</div>
-            <div class="option">D) Run</div>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>Question 7</h3>
-
-            <p><strong>They ___ playing football.</strong></p>
-
-            <div class="option">A) is</div>
-            <div class="option">B) am</div>
-            <div class="option">C) are</div>
-            <div class="option">D) be</div>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>Question 8</h3>
-
-            <p><strong>Which sentence is correct?</strong></p>
-
-            <div class="option">A) I has a car.</div>
-            <div class="option">B) I have a car.</div>
-            <div class="option">C) I having a car.</div>
-            <div class="option">D) I haves a car.</div>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>Question 9</h3>
-
-            <p><strong>Choose the correct spelling.</strong></p>
-
-            <div class="option">A) Recieve</div>
-            <div class="option">B) Receeve</div>
-            <div class="option">C) Receive</div>
-            <div class="option">D) Receve</div>
-
-        </div>
-
-
-        <div class="question">
-
-            <h3>Question 10</h3>
-
-            <p><strong>Which planet is closest to the Sun?</strong></p>
-
-            <div class="option">A) Earth</div>
-            <div class="option">B) Venus</div>
-            <div class="option">C) Mercury</div>
-            <div class="option">D) Mars</div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- MATH -->
-
-<section id="math">
-
-    <h2 class="section-title">🔢 Math Practice</h2>
-
-    <div class="grid">
-
-
-        <div class="card">
-
-            <h3>Question 1</h3>
-
-            <p><strong>15 + 5 × 2 = ?</strong></p>
-
-            <p>A) 40</p>
-            <p>B) 25</p>
-            <p>C) 20</p>
-            <p>D) 30</p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Question 2</h3>
-
-            <p><strong>81 ÷ 9 = ?</strong></p>
-
-            <p>A) 7</p>
-            <p>B) 8</p>
-            <p>C) 9</p>
-            <p>D) 10</p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Question 3</h3>
-
-            <p><strong>12 × 5 = ?</strong></p>
-
-            <p>A) 50</p>
-            <p>B) 60</p>
-            <p>C) 70</p>
-            <p>D) 80</p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Question 4</h3>
-
-            <p><strong>100 ÷ 10 = ?</strong></p>
-
-            <p>A) 5</p>
-            <p>B) 10</p>
-            <p>C) 20</p>
-            <p>D) 50</p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- TRUE OR FALSE -->
-
-<section>
-
-    <h2 class="section-title">✅ True or False</h2>
-
-    <div class="grid">
-
-
-        <div class="card">
-
-            <h3>Statement 1</h3>
-
-            <p>
-                The Sun is a star.
-            </p>
-
-            <p><strong>True or False?</strong></p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Statement 2</h3>
-
-            <p>
-                The Earth is the closest planet to the Sun.
-            </p>
-
-            <p><strong>True or False?</strong></p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Statement 3</h3>
-
-            <p>
-                Water freezes at 0°C under standard conditions.
-            </p>
-
-            <p><strong>True or False?</strong></p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Statement 4</h3>
-
-            <p>
-                Humans have three hearts.
-            </p>
-
-            <p><strong>True or False?</strong></p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FILL IN THE BLANKS -->
-
-<section>
-
-    <h2 class="section-title">✏️ Fill in the Blanks</h2>
-
-    <div class="quiz-box">
-
-
-        <div class="question">
-
-            <p>
-                <strong>1. She ___ a student.</strong>
-            </p>
-
-            <p>A) am</p>
-            <p>B) is</p>
-            <p>C) are</p>
-
-        </div>
-
-
-        <div class="question">
-
-            <p>
-                <strong>2. They ___ playing cricket.</strong>
-            </p>
-
-            <p>A) is</p>
-            <p>B) am</p>
-            <p>C) are</p>
-
-        </div>
-
-
-        <div class="question">
-
-            <p>
-                <strong>3. I ___ a new book.</strong>
-            </p>
-
-            <p>A) have</p>
-            <p>B) has</p>
-            <p>C) having</p>
-
-        </div>
-
-
-        <div class="question">
-
-            <p>
-                <strong>4. He ___ to school yesterday.</strong>
-            </p>
-
-            <p>A) go</p>
-            <p>B) goes</p>
-            <p>C) went</p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- AMAZING FACTS -->
-
-<section id="facts">
-
-    <h2 class="section-title">🌍 Amazing Facts</h2>
-
-
-    <div class="fact">
-
-        <strong>Fact 1:</strong>
-
-        Earth is the third planet from the Sun.
-
-    </div>
-
-
-    <div class="fact">
-
-        <strong>Fact 2:</strong>
-
-        The Pacific Ocean is the largest ocean on Earth.
-
-    </div>
-
-
-    <div class="fact">
-
-        <strong>Fact 3:</strong>
-
-        Light from the Sun takes about eight minutes to reach Earth.
-
-    </div>
-
-
-    <div class="fact">
-
-        <strong>Fact 4:</strong>
-
-        The Moon is Earth's natural satellite.
-
-    </div>
-
-
-    <div class="fact">
-
-        <strong>Fact 5:</strong>
-
-        Saturn is famous for its beautiful rings.
-
-    </div>
-
-</section>
+</div>
 
 
 <!-- SCIENCE -->
 
-<section id="science">
+<div id="science" class="lesson">
 
-    <h2 class="section-title">🔬 Science Facts</h2>
+<button class="back" onclick="showHome()">← Home</button>
 
-    <div class="grid">
+<h2>🔬 Science</h2>
 
+<p>Explore science through simple explanations.</p>
 
-        <div class="card">
+<div class="cards">
 
-            <h3>🌱 Plants</h3>
+<div class="card" onclick="showLesson('human_body')">
+<div class="icon">🫀</div>
+<h3>Human Body</h3>
+<p>Learn about body organs.</p>
+</div>
 
-            <p>
-                Plants use sunlight, water and carbon dioxide
-                to make food through photosynthesis.
-            </p>
+<div class="card" onclick="showLesson('plants')">
+<div class="icon">🌱</div>
+<h3>Plants</h3>
+<p>Learn how plants grow.</p>
+</div>
 
-        </div>
+<div class="card" onclick="showLesson('animals')">
+<div class="icon">🐘</div>
+<h3>Animals</h3>
+<p>Interesting animal facts.</p>
+</div>
 
+<div class="card" onclick="showLesson('physics')">
+<div class="icon">⚙️</div>
+<h3>Physics</h3>
+<p>Learn basic physics.</p>
+</div>
 
-        <div class="card">
+</div>
+</div>
 
-            <h3>💧 Water</h3>
 
-            <p>
-                Water can exist as a solid, liquid and gas.
-            </p>
+<!-- HUMAN BODY -->
 
-        </div>
+<div id="human_body" class="lesson">
 
+<button class="back" onclick="showCategory('science')">← Science</button>
 
-        <div class="card">
+<h2>🫀 Human Body</h2>
 
-            <h3>🧲 Magnets</h3>
+<div class="example">
+<strong>Heart:</strong> Pumps blood around the body.<br>
+<strong>Brain:</strong> Controls many body functions.<br>
+<strong>Lungs:</strong> Help us breathe.<br>
+<strong>Stomach:</strong> Helps digest food.<br>
+<strong>Kidneys:</strong> Help filter waste from blood.
+</div>
 
-            <p>
-                Magnets have two poles called the north pole
-                and south pole.
-            </p>
+</div>
 
-        </div>
 
+<!-- PLANTS -->
 
-        <div class="card">
+<div id="plants" class="lesson">
 
-            <h3>⚡ Electricity</h3>
+<button class="back" onclick="showCategory('science')">← Science</button>
 
-            <p>
-                Electricity involves the movement of electric charge.
-            </p>
+<h2>🌱 Plants</h2>
 
-        </div>
+<p>
+Plants make their food through a process called photosynthesis.
+</p>
 
-    </div>
+<div class="example">
+Plants need sunlight, water and carbon dioxide for photosynthesis.
+</div>
 
-</section>
+<div class="tip">
+Plants release oxygen during photosynthesis.
+</div>
 
+</div>
 
-<!-- UNIVERSE -->
 
-<section id="space">
+<!-- ANIMALS -->
 
-    <h2 class="section-title">🚀 Universe & Space</h2>
+<div id="animals" class="lesson">
 
-    <div class="grid">
+<button class="back" onclick="showCategory('science')">← Science</button>
 
+<h2>🐘 Animals</h2>
 
-        <div class="card">
+<div class="example">
+Elephants are the largest land animals.<br>
+Cheetahs are very fast land animals.<br>
+Dolphins are intelligent marine mammals.<br>
+Penguins are birds that cannot fly.
+</div>
 
-            <h3>☀️ The Sun</h3>
+</div>
 
-            <p>
-                The Sun is a star at the center of our solar system.
-            </p>
 
-        </div>
+<!-- PHYSICS -->
 
+<div id="physics" class="lesson">
 
-        <div class="card">
+<button class="back" onclick="showCategory('science')">← Science</button>
 
-            <h3>🌍 Earth</h3>
+<h2>⚙️ Basic Physics</h2>
 
-            <p>
-                Earth is the planet where we live.
-            </p>
+<h3>Force</h3>
+<p>A force is a push or pull.</p>
 
-        </div>
+<h3>Gravity</h3>
+<p>Gravity attracts objects toward Earth.</p>
 
+<h3>Motion</h3>
+<p>Motion means a change in position over time.</p>
 
-        <div class="card">
+</div>
 
-            <h3>🌙 The Moon</h3>
 
-            <p>
-                The Moon is Earth's natural satellite.
-            </p>
+<!-- MATH -->
 
-        </div>
+<div id="math" class="lesson">
 
+<button class="back" onclick="showHome()">← Home</button>
 
-        <div class="card">
+<h2>➗ Mathematics</h2>
 
-            <h3>🪐 Saturn</h3>
+<div class="cards">
 
-            <p>
-                Saturn is the sixth planet from the Sun
-                and has a famous ring system.
-            </p>
+<div class="card" onclick="showLesson('basic_math')">
+<div class="icon">➕</div>
+<h3>Basic Operations</h3>
+<p>Addition, subtraction, multiplication and division.</p>
+</div>
 
-        </div>
+<div class="card" onclick="showLesson('fractions')">
+<div class="icon">½</div>
+<h3>Fractions</h3>
+<p>Learn fractions easily.</p>
+</div>
 
-    </div>
+<div class="card" onclick="showLesson('decimals')">
+<div class="icon">0.5</div>
+<h3>Decimals</h3>
+<p>Understand decimal numbers.</p>
+</div>
 
-</section>
+<div class="card" onclick="showLesson('percentage')">
+<div class="icon">%</div>
+<h3>Percentage</h3>
+<p>Learn basic percentages.</p>
+</div>
 
+</div>
+</div>
 
-<!-- DAILY CHALLENGE -->
 
-<section>
+<!-- BASIC MATH -->
 
-    <div class="challenge">
+<div id="basic_math" class="lesson">
 
-        <h2>🔥 Daily Learning Challenge</h2>
+<button class="back" onclick="showCategory('math')">← Math</button>
 
-        <p>
-            Learn one new English word every day.
-        </p>
+<h2>➕ Basic Mathematics</h2>
 
-        <p>
-            Practice grammar, solve quizzes and discover amazing facts.
-        </p>
+<div class="example">
+Addition: 5 + 3 = 8<br>
+Subtraction: 9 − 4 = 5<br>
+Multiplication: 6 × 4 = 24<br>
+Division: 20 ÷ 5 = 4
+</div>
 
-        <p>
-            Keep Learning • Keep Growing • Keep Exploring
-        </p>
+<div class="tip">
+Remember the order of operations when solving mixed calculations.
+</div>
 
-        <div class="cta">
-            Learn Something New Today!
-        </div>
+</div>
 
-    </div>
 
-</section>
+<!-- FRACTIONS -->
 
+<div id="fractions" class="lesson">
 
-<!-- CONTACT -->
+<button class="back" onclick="showCategory('math')">← Math</button>
 
-<section id="contact">
+<h2>½ Fractions</h2>
 
-    <h2 class="section-title">📩 Contact</h2>
+<p>A fraction represents a part of a whole.</p>
 
-    <div class="card" style="text-align:center;">
+<div class="example">
+1/2 = one-half<br>
+1/4 = one-quarter<br>
+3/4 = three-quarters
+</div>
 
-        <h3>Learn English & Amazing Facts</h3>
+</div>
 
-        <p>
-            Thank you for visiting our website.
-        </p>
 
-        <p>
-            Keep learning English and discovering new facts every day.
-        </p>
+<!-- DECIMALS -->
 
-    </div>
+<div id="decimals" class="lesson">
 
-</section>
+<button class="back" onclick="showCategory('math')">← Math</button>
 
+<h2>0.5 Decimals</h2>
 
-</main>
+<div class="example">
+5/10 = 0.5<br>
+25/100 = 0.25<br>
+5/100 = 0.05
+</div>
 
+<p>
+Decimals are another way of representing fractions.
+</p>
 
-<!-- FOOTER -->
+</div>
 
-<footer>
 
-    <p>
-        © 2026 Learn English & Amazing Facts
-    </p>
+<!-- PERCENTAGE -->
 
-    <p>
-        Learn English • Quiz • Science • Universe • Amazing Facts
-    </p>
-
-</footer>
-
-
-</body>
-
-    </html>
+<div id="percentage
