@@ -6,18 +6,19 @@
 <meta name="google-site-verification" content="sVmUWQIDhJOkeMyHiIEUMv7dI8L9bCLRFJ6z2mkmavE">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Learn English & Amazing Facts</title>
 
-<meta name="description" content="Learn English grammar, spoken English, vocabulary, mathematics, science, GK, quizzes and amazing facts in a simple and fun way.">
+<meta name="description" content="Learn English grammar, spoken English, vocabulary, math, science, GK, quizzes and universe topics in a simple way.">
 
-<meta name="keywords" content="English learning, English grammar, spoken English, vocabulary, math, science, GK, quiz, amazing facts, universe">
+<meta name="keywords" content="English grammar, spoken English, vocabulary, math, science, GK, quiz, universe, amazing facts">
 
 <meta name="robots" content="index, follow">
-<meta name="author" content="Learn English & Amazing Facts">
 
 <link rel="canonical" href="https://arifkhan543.github.io/learn-english-amazing-facts-/">
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -25,7 +26,7 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:#f2f6fc;
     color:#222;
     line-height:1.7;
@@ -35,21 +36,21 @@ header{
     background:linear-gradient(135deg,#2563eb,#7c3aed);
     color:white;
     text-align:center;
-    padding:55px 20px;
+    padding:45px 15px;
 }
 
 .logo{
-    font-size:55px;
-    margin-bottom:15px;
+    font-size:45px;
+    margin-bottom:10px;
 }
 
 header h1{
-    font-size:42px;
-    margin-bottom:15px;
+    font-size:38px;
+    margin-bottom:10px;
 }
 
 header p{
-    font-size:19px;
+    font-size:17px;
     max-width:800px;
     margin:auto;
 }
@@ -59,22 +60,22 @@ nav{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:8px;
-    padding:14px;
+    gap:6px;
+    padding:12px;
     position:sticky;
     top:0;
-    z-index:1000;
+    z-index:999;
 }
 
 nav button{
     background:none;
-    border:none;
+    border:0;
     color:white;
-    font-size:16px;
+    font-size:15px;
     font-weight:bold;
-    padding:10px 14px;
-    cursor:pointer;
+    padding:9px 12px;
     border-radius:8px;
+    cursor:pointer;
 }
 
 nav button:hover{
@@ -84,44 +85,59 @@ nav button:hover{
 .container{
     max-width:1100px;
     margin:auto;
-    padding:25px 15px 50px;
+    padding:20px 15px 50px;
 }
 
-.section{
+.section,
+.lesson{
     background:white;
     border-radius:18px;
-    padding:30px;
-    margin:25px 0;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    padding:28px;
+    margin:22px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.section h2{
-    color:#2563eb;
-    font-size:30px;
-    margin-bottom:15px;
+.lesson{
+    display:none;
 }
 
-.section h3{
-    color:#7c3aed;
-    margin-top:20px;
-    margin-bottom:8px;
+.lesson.active{
+    display:block;
 }
 
 .hero{
     text-align:center;
 }
 
+.hero h2,
+.lesson h2{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
 .hero h2{
-    font-size:34px;
+    font-size:32px;
+}
+
+.lesson h2{
+    font-size:28px;
 }
 
 .hero p{
     font-size:18px;
 }
 
+.tip{
+    background:#ecfdf5;
+    border-left:5px solid #10b981;
+    padding:15px;
+    margin:20px 0;
+    border-radius:8px;
+}
+
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
     gap:18px;
     margin-top:20px;
 }
@@ -129,78 +145,63 @@ nav button:hover{
 .card{
     background:#f8fafc;
     border:2px solid #e5e7eb;
-    border-radius:15px;
-    padding:22px;
+    border-radius:16px;
+    padding:24px 15px;
     text-align:center;
     cursor:pointer;
-    transition:0.25s;
+    transition:.2s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    transform:translateY(-4px);
     border-color:#2563eb;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
 }
 
-.card .icon{
-    font-size:40px;
+.icon{
+    font-size:42px;
     margin-bottom:8px;
 }
 
 .card h3{
-    margin:5px 0;
     color:#1d4ed8;
+    margin:5px 0;
 }
 
 .card p{
     color:#555;
 }
 
-.lesson{
-    display:none;
-    background:#ffffff;
-    border-radius:18px;
-    padding:30px;
-    margin:25px 0;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.lesson.active{
-    display:block;
-}
-
-.lesson h2{
-    color:#2563eb;
-    margin-bottom:15px;
-}
-
-.lesson h3{
-    color:#7c3aed;
-    margin-top:22px;
-}
-
 .example{
     background:#eff6ff;
     border-left:5px solid #2563eb;
     padding:15px;
-    margin:12px 0;
+    margin:15px 0;
     border-radius:8px;
 }
 
-.tip{
-    background:#ecfdf5;
-    border-left:5px solid #10b981;
-    padding:15px;
-    margin:15px 0;
+.lesson h3{
+    color:#7c3aed;
+    margin-top:20px;
+}
+
+.back{
+    background:#2563eb;
+    color:white;
+    border:0;
+    padding:10px 17px;
     border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
 .question{
     background:#f8fafc;
-    padding:18px;
-    border-radius:12px;
-    margin:15px 0;
     border:1px solid #ddd;
+    padding:18px;
+    margin:15px 0;
+    border-radius:12px;
 }
 
 .option{
@@ -212,15 +213,8 @@ nav button:hover{
     border-radius:7px;
 }
 
-.back{
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:11px 18px;
-    border-radius:8px;
-    cursor:pointer;
-    margin-bottom:20px;
-    font-weight:bold;
+ul{
+    padding-left:25px;
 }
 
 footer{
@@ -230,154 +224,157 @@ footer{
     padding:30px 15px;
 }
 
-footer p{
-    margin:5px;
-}
-
-.hidden{
-    display:none;
-}
-
-ul{
-    padding-left:25px;
-}
-
 strong{
     color:#1d4ed8;
 }
 
 @media(max-width:600px){
+
     header h1{
-        font-size:32px;
+        font-size:30px;
     }
 
     header p{
-        font-size:16px;
-    }
-
-    .section{
-        padding:22px;
-    }
-
-    .section h2{
-        font-size:25px;
+        font-size:15px;
     }
 
     nav button{
         font-size:14px;
         padding:8px 9px;
     }
+
+    .section,
+    .lesson{
+        padding:20px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">📚 🌎 💡</div>
-    <h1>Learn English & Amazing Facts</h1>
-    <p>
-        Improve Your English • Learn New Words • Practice Math •
-        Explore Science • Discover Amazing Facts
-    </p>
+
+<div class="logo">📚 🌎 💡</div>
+
+<h1>Learn English & Amazing Facts</h1>
+
+<p>
+Improve Your English • Learn New Words • Practice Math •
+Explore Science • Discover Amazing Facts
+</p>
+
 </header>
 
+
 <nav>
-    <button onclick="showHome()">Home</button>
-    <button onclick="showCategory('grammar')">Grammar</button>
-    <button onclick="showCategory('spoken')">Spoken English</button>
-    <button onclick="showCategory('vocabulary')">Vocabulary</button>
-    <button onclick="showCategory('science')">Science</button>
-    <button onclick="showCategory('math')">Math</button>
-    <button onclick="showCategory('gk')">GK</button>
-    <button onclick="showCategory('quiz')">Quiz</button>
-    <button onclick="showCategory('universe')">Universe</button>
+
+<button onclick="showHome()">Home</button>
+<button onclick="showCategory('grammar')">Grammar</button>
+<button onclick="showCategory('spoken')">Spoken English</button>
+<button onclick="showCategory('vocabulary')">Vocabulary</button>
+<button onclick="showCategory('science')">Science</button>
+<button onclick="showCategory('math')">Math</button>
+<button onclick="showCategory('gk')">GK</button>
+<button onclick="showCategory('quiz')">Quiz</button>
+<button onclick="showCategory('universe')">Universe</button>
+
 </nav>
+
 
 <main class="container">
 
+
 <!-- HOME -->
 
-<div id="home" class="section hero">
-    <h2>Welcome to Learn English & Amazing Facts</h2>
+<section id="home" class="section hero">
 
-    <p>
-        Learn English easily with grammar lessons, spoken English,
-        vocabulary, mathematics, science, general knowledge,
-        quizzes and amazing facts.
-    </p>
+<h2>Welcome to Learn English & Amazing Facts</h2>
 
-    <div class="tip">
-        <strong>How to use this website:</strong><br>
-        Tap any topic below and start learning!
-    </div>
+<p>
+Learn English easily with grammar lessons, spoken English,
+vocabulary, mathematics, science, general knowledge,
+quizzes and universe facts.
+</p>
 
-    <div class="cards">
+<div class="tip">
 
-        <div class="card" onclick="showCategory('grammar')">
-            <div class="icon">📘</div>
-            <h3>Grammar</h3>
-            <p>Learn English grammar step by step.</p>
-        </div>
+<strong>How to use this website:</strong><br>
 
-        <div class="card" onclick="showCategory('spoken')">
-            <div class="icon">🗣️</div>
-            <h3>Spoken English</h3>
-            <p>Learn useful daily English sentences.</p>
-        </div>
+Tap any topic below and start learning!
 
-        <div class="card" onclick="showCategory('vocabulary')">
-            <div class="icon">📖</div>
-            <h3>Vocabulary</h3>
-            <p>Learn new English words and meanings.</p>
-        </div>
-
-        <div class="card" onclick="showCategory('science')">
-            <div class="icon">🔬</div>
-            <h3>Science</h3>
-            <p>Explore science in a simple way.</p>
-        </div>
-
-        <div class="card" onclick="showCategory('math')">
-            <div class="icon">➗</div>
-            <h3>Math</h3>
-            <p>Practice mathematics easily.</p>
-        </div>
-
-        <div class="card" onclick="showCategory('gk')">
-            <div class="icon">🌍</div>
-            <h3>General Knowledge</h3>
-            <p>Discover useful GK facts.</p>
-        </div>
-
-        <div class="card" onclick="showCategory('quiz')">
-            <div class="icon">🎯</div>
-            <h3>Quiz</h3>
-            <p>Test your knowledge.</p>
-        </div>
-
-        <div class="card" onclick="showCategory('universe')">
-            <div class="icon">🌌</div>
-            <h3>Universe</h3>
-            <p>Explore planets, stars and space.</p>
-        </div>
-
-    </div>
 </div>
+
+
+<div class="cards">
+
+<div class="card" onclick="showCategory('grammar')">
+<div class="icon">📘</div>
+<h3>Grammar</h3>
+<p>Learn English grammar step by step.</p>
+</div>
+
+<div class="card" onclick="showCategory('spoken')">
+<div class="icon">🗣️</div>
+<h3>Spoken English</h3>
+<p>Learn useful daily English.</p>
+</div>
+
+<div class="card" onclick="showCategory('vocabulary')">
+<div class="icon">📖</div>
+<h3>Vocabulary</h3>
+<p>Learn new English words.</p>
+</div>
+
+<div class="card" onclick="showCategory('science')">
+<div class="icon">🔬</div>
+<h3>Science</h3>
+<p>Explore science topics.</p>
+</div>
+
+<div class="card" onclick="showCategory('math')">
+<div class="icon">➗</div>
+<h3>Math</h3>
+<p>Practice mathematics.</p>
+</div>
+
+<div class="card" onclick="showCategory('gk')">
+<div class="icon">🌍</div>
+<h3>General Knowledge</h3>
+<p>Learn useful GK.</p>
+</div>
+
+<div class="card" onclick="showCategory('quiz')">
+<div class="icon">🎯</div>
+<h3>Quiz</h3>
+<p>Test your knowledge.</p>
+</div>
+
+<div class="card" onclick="showCategory('universe')">
+<div class="icon">🌌</div>
+<h3>Universe</h3>
+<p>Explore space and planets.</p>
+</div>
+
+</div>
+
+</section>
 
 
 <!-- GRAMMAR -->
 
-<div id="grammar" class="lesson">
+<section id="grammar" class="lesson">
 
-<button class="back" onclick="showHome()">← Back to Home</button>
+<button class="back" onclick="showHome()">← Home</button>
 
 <h2>📘 English Grammar</h2>
 
-<p>
-Grammar helps us make correct English sentences.
-Choose a topic and learn it with examples.
-</p>
+<p>Choose a grammar topic to learn.</p>
 
 <div class="cards">
 
@@ -414,23 +411,37 @@ Choose a topic and learn it with examples.
 <div class="card" onclick="showLesson('am_is_are')">
 <div class="icon">🔤</div>
 <h3>Am / Is / Are</h3>
-<p>Learn their correct use.</p>
+<p>Correct usage</p>
+</div>
+
+<div class="card" onclick="showLesson('has_have')">
+<div class="icon">📝</div>
+<h3>Has / Have / Had</h3>
+<p>Learn the correct use.</p>
+</div>
+
+<div class="card" onclick="showLesson('do_does_did')">
+<div class="icon">❓</div>
+<h3>Do / Does / Did</h3>
+<p>Learn their usage.</p>
 </div>
 
 </div>
-</div>
+
+</section>
 
 
 <!-- ARTICLES -->
 
-<div id="articles" class="lesson">
+<section id="articles" class="lesson">
 
 <button class="back" onclick="showCategory('grammar')">← Grammar</button>
 
 <h2>📚 Articles: A, An and The</h2>
 
 <h3>A</h3>
-<p>Use <strong>A</strong> before a singular word that begins with a consonant sound.</p>
+
+<p>Use A before a singular word beginning with a consonant sound.</p>
 
 <div class="example">
 A boy.<br>
@@ -439,7 +450,8 @@ A book.
 </div>
 
 <h3>An</h3>
-<p>Use <strong>An</strong> before a singular word that begins with a vowel sound.</p>
+
+<p>Use An before a vowel sound.</p>
 
 <div class="example">
 An apple.<br>
@@ -448,7 +460,8 @@ An orange.
 </div>
 
 <h3>The</h3>
-<p>Use <strong>The</strong> when talking about a particular person, place or thing.</p>
+
+<p>Use The for a particular person, place or thing.</p>
 
 <div class="example">
 The sun is hot.<br>
@@ -456,29 +469,26 @@ The book is on the table.
 </div>
 
 <div class="tip">
-<strong>Practice:</strong> ___ apple, ___ boy, ___ sun.
+Practice: ___ apple, ___ boy, ___ sun.
 </div>
 
-</div>
+</section>
 
 
 <!-- PRONOUNS -->
 
-<div id="pronouns" class="lesson">
+<section id="pronouns" class="lesson">
 
 <button class="back" onclick="showCategory('grammar')">← Grammar</button>
 
 <h2>👤 Pronouns</h2>
 
-<p>
-A pronoun is a word used instead of a noun.
-</p>
+<p>A pronoun is used instead of a noun.</p>
 
 <div class="example">
-Rahul is a boy. <strong>He</strong> is a boy.
+Rahul is a boy. <strong>He</strong> is a boy.<br>
+Rina is a girl. <strong>She</strong> is a girl.
 </div>
-
-<h3>Common Pronouns</h3>
 
 <ul>
 <li>I</li>
@@ -490,24 +500,16 @@ Rahul is a boy. <strong>He</strong> is a boy.
 <li>They</li>
 </ul>
 
-<div class="tip">
-Example: Rina is a girl. <strong>She</strong> is a girl.
-</div>
-
-</div>
+</section>
 
 
 <!-- PREPOSITIONS -->
 
-<div id="prepositions" class="lesson">
+<section id="prepositions" class="lesson">
 
 <button class="back" onclick="showCategory('grammar')">← Grammar</button>
 
 <h2>📍 Prepositions</h2>
-
-<p>
-Prepositions show the relationship between words.
-</p>
 
 <div class="example">
 The book is <strong>on</strong> the table.<br>
@@ -515,8 +517,6 @@ The cat is <strong>under</strong> the table.<br>
 He is <strong>in</strong> the room.<br>
 She is <strong>at</strong> school.
 </div>
-
-<h3>Common Prepositions</h3>
 
 <ul>
 <li>in</li>
@@ -532,12 +532,12 @@ She is <strong>at</strong> school.
 <li>to</li>
 </ul>
 
-</div>
+</section>
 
 
 <!-- TENSE -->
 
-<div id="tense" class="lesson">
+<section id="tense" class="lesson">
 
 <button class="back" onclick="showCategory('grammar')">← Grammar</button>
 
@@ -545,39 +545,37 @@ She is <strong>at</strong> school.
 
 <p>Tense tells us when an action happens.</p>
 
-<h3>Present Tense</h3>
+<h3>Present</h3>
 
 <div class="example">
 I play football.<br>
 She reads a book.
 </div>
 
-<h3>Past Tense</h3>
+<h3>Past</h3>
 
 <div class="example">
 I played football.<br>
 She read a book.
 </div>
 
-<h3>Future Tense</h3>
+<h3>Future</h3>
 
 <div class="example">
 I will play football.<br>
 She will read a book.
 </div>
 
-</div>
+</section>
 
 
 <!-- VERBS -->
 
-<div id="verbs" class="lesson">
+<section id="verbs" class="lesson">
 
 <button class="back" onclick="showCategory('grammar')">← Grammar</button>
 
-<h2>⚡ Verbs</h2>
-
-<p>A verb usually shows an action or state.</p>
+<h2>⚡ Verbs: V1, V2 and V3</h2>
 
 <div class="example">
 Go → Went → Gone<br>
@@ -595,12 +593,12 @@ See → Saw → Seen
 <h3>V3</h3>
 <p>Past participle: gone, eaten, written</p>
 
-</div>
+</section>
 
 
 <!-- AM IS ARE -->
 
-<div id="am_is_are" class="lesson">
+<section id="am_is_are" class="lesson">
 
 <button class="back" onclick="showCategory('grammar')">← Grammar</button>
 
@@ -613,8 +611,6 @@ She <strong>is</strong> a teacher.<br>
 They <strong>are</strong> friends.
 </div>
 
-<h3>Remember</h3>
-
 <ul>
 <li>I → am</li>
 <li>He → is</li>
@@ -625,52 +621,100 @@ They <strong>are</strong> friends.
 <li>They → are</li>
 </ul>
 
+</section>
+
+
+<!-- HAS HAVE -->
+
+<section id="has_have" class="lesson">
+
+<button class="back" onclick="showCategory('grammar')">← Grammar</button>
+
+<h2>📝 Has / Have / Had</h2>
+
+<div class="example">
+I <strong>have</strong> a book.<br>
+You <strong>have</strong> a pen.<br>
+He <strong>has</strong> a car.<br>
+She <strong>has</strong> a bag.<br>
+They <strong>have</strong> a house.
 </div>
 
+<h3>Had</h3>
 
-<!-- SPOKEN ENGLISH -->
+<div class="example">
+I <strong>had</strong> a bicycle.<br>
+She <strong>had</strong> a doll.
+</div>
 
-<div id="spoken" class="lesson">
+</section>
+
+
+<!-- DO DOES DID -->
+
+<section id="do_does_did" class="lesson">
+
+<button class="back" onclick="showCategory('grammar')">← Grammar</button>
+
+<h2>❓ Do / Does / Did</h2>
+
+<div class="example">
+<strong>Do</strong> you play football?<br>
+<strong>Does</strong> he play football?<br>
+<strong>Did</strong> you go there yesterday?
+</div>
+
+<ul>
+<li>I / You / We / They → Do</li>
+<li>He / She / It → Does</li>
+<li>Past → Did</li>
+</ul>
+
+</section>
+
+
+<!-- SPOKEN -->
+
+<section id="spoken" class="lesson">
 
 <button class="back" onclick="showHome()">← Home</button>
 
 <h2>🗣️ Spoken English</h2>
-
-<p>Learn useful English for everyday conversations.</p>
 
 <div class="cards">
 
 <div class="card" onclick="showLesson('daily_sentences')">
 <div class="icon">💬</div>
 <h3>Daily Sentences</h3>
-<p>Useful sentences for everyday life.</p>
+<p>Useful everyday English.</p>
 </div>
 
 <div class="card" onclick="showLesson('introduction')">
 <div class="icon">🙋</div>
 <h3>Self Introduction</h3>
-<p>How to introduce yourself.</p>
+<p>Introduce yourself.</p>
 </div>
 
 <div class="card" onclick="showLesson('conversation')">
 <div class="icon">🗨️</div>
 <h3>Conversation</h3>
-<p>Simple English conversations.</p>
+<p>Simple conversations.</p>
 </div>
 
 <div class="card" onclick="showLesson('questions')">
 <div class="icon">❓</div>
 <h3>Common Questions</h3>
-<p>Questions and useful answers.</p>
+<p>Useful questions and answers.</p>
 </div>
 
 </div>
-</div>
+
+</section>
 
 
 <!-- DAILY SENTENCES -->
 
-<div id="daily_sentences" class="lesson">
+<section id="daily_sentences" class="lesson">
 
 <button class="back" onclick="showCategory('spoken')">← Spoken English</button>
 
@@ -689,22 +733,16 @@ I understand.<br>
 See you tomorrow.
 </div>
 
-<div class="tip">
-Practice these sentences every day to improve your speaking.
-</div>
-
-</div>
+</section>
 
 
 <!-- INTRODUCTION -->
 
-<div id="introduction" class="lesson">
+<section id="introduction" class="lesson">
 
 <button class="back" onclick="showCategory('spoken')">← Spoken English</button>
 
 <h2>🙋 Self Introduction</h2>
-
-<p>You can introduce yourself in a simple way:</p>
 
 <div class="example">
 Hello! My name is ______.<br>
@@ -715,12 +753,12 @@ My favorite subject is ______.<br>
 Nice to meet you.
 </div>
 
-</div>
+</section>
 
 
 <!-- CONVERSATION -->
 
-<div id="conversation" class="lesson">
+<section id="conversation" class="lesson">
 
 <button class="back" onclick="showCategory('spoken')">← Spoken English</button>
 
@@ -737,12 +775,12 @@ Nice to meet you.
 <strong>B:</strong> Thank you.
 </div>
 
-</div>
+</section>
 
 
 <!-- QUESTIONS -->
 
-<div id="questions" class="lesson">
+<section id="questions" class="lesson">
 
 <button class="back" onclick="showCategory('spoken')">← Spoken English</button>
 
@@ -763,17 +801,12 @@ I am from ______.
 I am a student.
 </div>
 
-<div class="example">
-<strong>What is your favorite subject?</strong><br>
-My favorite subject is ______.
-</div>
-
-</div>
+</section>
 
 
 <!-- VOCABULARY -->
 
-<div id="vocabulary" class="lesson">
+<section id="vocabulary" class="lesson">
 
 <button class="back" onclick="showHome()">← Home</button>
 
@@ -790,7 +823,7 @@ My favorite subject is ______.
 <div class="card" onclick="showLesson('synonyms')">
 <div class="icon">🔄</div>
 <h3>Synonyms</h3>
-<p>Words with similar meanings.</p>
+<p>Similar meaning words.</p>
 </div>
 
 <div class="card" onclick="showLesson('antonyms')">
@@ -800,16 +833,15 @@ My favorite subject is ______.
 </div>
 
 </div>
-</div>
+
+</section>
 
 
-<!-- COMMON WORDS -->
-
-<div id="common_words" class="lesson">
+<section id="common_words" class="lesson">
 
 <button class="back" onclick="showCategory('vocabulary')">← Vocabulary</button>
 
-<h2>🔤 Common English Words</h2>
+<h2>🔤 Common Words</h2>
 
 <div class="example">
 Happy = আনন্দিত<br>
@@ -822,12 +854,10 @@ Important = গুরুত্বপূর্ণ<br>
 Amazing = আশ্চর্যজনক
 </div>
 
-</div>
+</section>
 
 
-<!-- SYNONYMS -->
-
-<div id="synonyms" class="lesson">
+<section id="synonyms" class="lesson">
 
 <button class="back" onclick="showCategory('vocabulary')">← Vocabulary</button>
 
@@ -842,12 +872,10 @@ Smart → Clever<br>
 Begin → Start
 </div>
 
-</div>
+</section>
 
 
-<!-- ANTONYMS -->
-
-<div id="antonyms" class="lesson">
+<section id="antonyms" class="lesson">
 
 <button class="back" onclick="showCategory('vocabulary')">← Vocabulary</button>
 
@@ -862,18 +890,16 @@ Fast ↔ Slow<br>
 Happy ↔ Sad
 </div>
 
-</div>
+</section>
 
 
 <!-- SCIENCE -->
 
-<div id="science" class="lesson">
+<section id="science" class="lesson">
 
 <button class="back" onclick="showHome()">← Home</button>
 
 <h2>🔬 Science</h2>
-
-<p>Explore science through simple explanations.</p>
 
 <div class="cards">
 
@@ -886,7 +912,7 @@ Happy ↔ Sad
 <div class="card" onclick="showLesson('plants')">
 <div class="icon">🌱</div>
 <h3>Plants</h3>
-<p>Learn how plants grow.</p>
+<p>Learn about plants.</p>
 </div>
 
 <div class="card" onclick="showLesson('animals')">
@@ -898,16 +924,15 @@ Happy ↔ Sad
 <div class="card" onclick="showLesson('physics')">
 <div class="icon">⚙️</div>
 <h3>Physics</h3>
-<p>Learn basic physics.</p>
+<p>Basic physics.</p>
 </div>
 
 </div>
-</div>
+
+</section>
 
 
-<!-- HUMAN BODY -->
-
-<div id="human_body" class="lesson">
+<section id="human_body" class="lesson">
 
 <button class="back" onclick="showCategory('science')">← Science</button>
 
@@ -921,35 +946,27 @@ Happy ↔ Sad
 <strong>Kidneys:</strong> Help filter waste from blood.
 </div>
 
-</div>
+</section>
 
 
-<!-- PLANTS -->
-
-<div id="plants" class="lesson">
+<section id="plants" class="lesson">
 
 <button class="back" onclick="showCategory('science')">← Science</button>
 
 <h2>🌱 Plants</h2>
 
 <p>
-Plants make their food through a process called photosynthesis.
+Plants make their food through photosynthesis.
 </p>
 
 <div class="example">
 Plants need sunlight, water and carbon dioxide for photosynthesis.
 </div>
 
-<div class="tip">
-Plants release oxygen during photosynthesis.
-</div>
-
-</div>
+</section>
 
 
-<!-- ANIMALS -->
-
-<div id="animals" class="lesson">
+<section id="animals" class="lesson">
 
 <button class="back" onclick="showCategory('science')">← Science</button>
 
@@ -962,12 +979,10 @@ Dolphins are intelligent marine mammals.<br>
 Penguins are birds that cannot fly.
 </div>
 
-</div>
+</section>
 
 
-<!-- PHYSICS -->
-
-<div id="physics" class="lesson">
+<section id="physics" class="lesson">
 
 <button class="back" onclick="showCategory('science')">← Science</button>
 
@@ -982,12 +997,12 @@ Penguins are birds that cannot fly.
 <h3>Motion</h3>
 <p>Motion means a change in position over time.</p>
 
-</div>
+</section>
 
 
 <!-- MATH -->
 
-<div id="math" class="lesson">
+<section id="math" class="lesson">
 
 <button class="back" onclick="showHome()">← Home</button>
 
@@ -1004,28 +1019,27 @@ Penguins are birds that cannot fly.
 <div class="card" onclick="showLesson('fractions')">
 <div class="icon">½</div>
 <h3>Fractions</h3>
-<p>Learn fractions easily.</p>
+<p>Learn fractions.</p>
 </div>
 
 <div class="card" onclick="showLesson('decimals')">
 <div class="icon">0.5</div>
 <h3>Decimals</h3>
-<p>Understand decimal numbers.</p>
+<p>Understand decimals.</p>
 </div>
 
 <div class="card" onclick="showLesson('percentage')">
 <div class="icon">%</div>
 <h3>Percentage</h3>
-<p>Learn basic percentages.</p>
+<p>Learn percentages.</p>
 </div>
 
 </div>
-</div>
+
+</section>
 
 
-<!-- BASIC MATH -->
-
-<div id="basic_math" class="lesson">
+<section id="basic_math" class="lesson">
 
 <button class="back" onclick="showCategory('math')">← Math</button>
 
@@ -1038,16 +1052,10 @@ Multiplication: 6 × 4 = 24<br>
 Division: 20 ÷ 5 = 4
 </div>
 
-<div class="tip">
-Remember the order of operations when solving mixed calculations.
-</div>
-
-</div>
+</section>
 
 
-<!-- FRACTIONS -->
-
-<div id="fractions" class="lesson">
+<section id="fractions" class="lesson">
 
 <button class="back" onclick="showCategory('math')">← Math</button>
 
@@ -1061,12 +1069,10 @@ Remember the order of operations when solving mixed calculations.
 3/4 = three-quarters
 </div>
 
-</div>
+</section>
 
 
-<!-- DECIMALS -->
-
-<div id="decimals" class="lesson">
+<section id="decimals" class="lesson">
 
 <button class="back" onclick="showCategory('math')">← Math</button>
 
@@ -1078,13 +1084,56 @@ Remember the order of operations when solving mixed calculations.
 5/100 = 0.05
 </div>
 
-<p>
-Decimals are another way of representing fractions.
-</p>
+</section>
+
+
+<section id="percentage" class="lesson">
+
+<button class="back" onclick="showCategory('math')">← Math</button>
+
+<h2>% Percentage</h2>
+
+<div class="example">
+50% = 50/100 = 0.5<br>
+25% = 25/100 = 0.25<br>
+10% = 10/100 = 0.10
+</div>
+
+</section>
+
+
+<!-- GK -->
+
+<section id="gk" class="lesson">
+
+<button class="back" onclick="showHome()">← Home</button>
+
+<h2>🌍 General Knowledge</h2>
+
+<div class="cards">
+
+<div class="card" onclick="showLesson('world_gk')">
+<div class="icon">🌎</div>
+<h3>World GK</h3>
+<p>Interesting world facts.</p>
+</div>
+
+<div class="card" onclick="showLesson('india_gk')">
+<div class="icon">🇮🇳</div>
+<h3>India GK</h3>
+<p>Learn about India.</p>
+</div>
 
 </div>
 
+</section>
 
-<!-- PERCENTAGE -->
 
-<div id="percentage
+<section id="world_gk" class="lesson">
+
+<button class="back" onclick="showCategory('gk')">← GK</button>
+
+<h2>🌎 World GK</h2>
+
+<div class="example">
+Capital of France → Paris
