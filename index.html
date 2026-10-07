@@ -2,1144 +2,381 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Learn English & Amazing Facts</title>
-
-<meta name="description" content="Learn English, Grammar, Vocabulary, GK, Science, Math, Universe and Amazing Facts in a simple way.">
-
+<meta name="description" content="Interactive English, GK, Science and Math quizzes with 20 questions per topic.">
 <meta name="google-site-verification" content="sVmUWQIDhJOkeMyHiIEUMv7dI8L9bCLRFJ6z2mkmavE">
-
 <link rel="canonical" href="https://arifkhan543.github.io/learn-english-amazing-facts-/">
 
 <style>
-
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f7fb;
-    color:#222;
-}
-
-header{
-    background:linear-gradient(135deg,#4f46e5,#06b6d4);
-    color:white;
-    text-align:center;
-    padding:25px 15px;
-}
-
-header img{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid white;
-}
-
-header h1{
-    margin:12px 0 5px;
-    font-size:28px;
-}
-
-header p{
-    margin:0;
-    font-size:15px;
-}
-
-.container{
-    width:94%;
-    max-width:1100px;
-    margin:20px auto;
-}
-
-.section-title{
-    text-align:center;
-    margin:25px 0 15px;
-    color:#333;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:15px;
-}
-
-.card{
-    background:white;
-    padding:20px 12px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 4px 12px rgba(0,0,0,.10);
-    cursor:pointer;
-    transition:.2s;
-    border:2px solid transparent;
-}
-
-.card:hover{
-    transform:translateY(-3px);
-    border-color:#4f46e5;
-}
-
-.card .icon{
-    font-size:38px;
-    margin-bottom:8px;
-}
-
-.card h3{
-    margin:5px 0;
-    font-size:17px;
-}
-
-.card p{
-    margin:5px 0;
-    font-size:13px;
-    color:#666;
-}
-
-.lesson{
-    display:none;
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 4px 12px rgba(0,0,0,.10);
-}
-
-.lesson.active{
-    display:block;
-}
-
-.lesson h2{
-    text-align:center;
-    color:#4f46e5;
-}
-
-.back{
-    background:#4f46e5;
-    color:white;
-    border:0;
-    padding:10px 18px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:15px;
-}
-
-.topic{
-    background:#f1f5f9;
-    margin:12px 0;
-    padding:15px;
-    border-radius:10px;
-}
-
-.topic h3{
-    margin-top:0;
-    color:#0f766e;
-}
-
-.example{
-    background:#ecfeff;
-    padding:12px;
-    border-left:4px solid #06b6d4;
-    margin-top:8px;
-}
-
-footer{
-    margin-top:30px;
-    background:#111827;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-button{
-    font-family:inherit;
-}
-
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#222}
+header{background:linear-gradient(135deg,#4f46e5,#06b6d4);color:white;text-align:center;padding:25px 12px}
+header img{width:85px;height:85px;border-radius:50%;object-fit:cover;border:4px solid white}
+header h1{margin:10px 0 5px;font-size:27px}
+header p{margin:0}
+.container{width:94%;max-width:1000px;margin:18px auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:13px}
+.card{background:white;padding:18px 10px;border-radius:15px;text-align:center;box-shadow:0 3px 12px #0001;cursor:pointer}
+.card:active{transform:scale(.98)}
+.icon{font-size:34px}
+.card h3{margin:7px 0 2px;font-size:16px}
+.card p{margin:4px 0;color:#666;font-size:13px}
+.lesson{display:none;background:white;padding:18px;border-radius:15px;box-shadow:0 3px 12px #0001}
+.lesson.active{display:block}
+.back,.restart{border:0;border-radius:8px;padding:10px 16px;color:white;background:#4f46e5;cursor:pointer}
+h2{text-align:center;color:#4f46e5}
+.quizbox{background:#f8fafc;padding:15px;border-radius:12px;margin:15px 0}
+.qtext{font-weight:700;font-size:17px;margin:12px 0}
+.option{display:block;width:100%;text-align:left;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:9px;background:white;cursor:pointer;font-size:15px}
+.option:disabled{cursor:default}
+.correct{background:#dcfce7!important;border-color:#16a34a!important}
+.wrong{background:#fee2e2!important;border-color:#dc2626!important}
+.result{font-weight:700;margin:10px 0}
+.score{font-size:20px;text-align:center;font-weight:700;padding:20px}
+.progress{font-size:13px;color:#666}
+footer{margin-top:25px;background:#111827;color:white;text-align:center;padding:18px}
 </style>
 </head>
 
 <body>
 
 <header>
-
-<img src="profile.jpg.png" alt="Learn English and Amazing Facts">
-
+<img src="profile.jpg.png" alt="Learn English & Amazing Facts">
 <h1>Learn English & Amazing Facts</h1>
-
-<p>English • GK • Science • Math • Amazing Facts</p>
-
+<p>Interactive Quiz • English • GK • Science • Math</p>
 </header>
-
 
 <div class="container">
 
-<!-- HOME -->
-
 <div id="home">
-
-<h2 class="section-title">📚 Choose a Category</h2>
-
-<div class="cards">
-
-<div class="card" onclick="showCategory('english')">
-<div class="icon">🇬🇧</div>
-<h3>English</h3>
-<p>Learn English easily</p>
-</div>
-
-<div class="card" onclick="showCategory('grammar')">
-<div class="icon">📖</div>
-<h3>Grammar</h3>
-<p>English Grammar</p>
-</div>
-
-<div class="card" onclick="showCategory('vocabulary')">
-<div class="icon">📝</div>
-<h3>Vocabulary</h3>
-<p>Words and meanings</p>
-</div>
-
-<div class="card" onclick="showCategory('science')">
-<div class="icon">🔬</div>
-<h3>Science</h3>
-<p>Science facts</p>
-</div>
-
-<div class="card" onclick="showCategory('math')">
-<div class="icon">➗</div>
-<h3>Math</h3>
-<p>Learn Mathematics</p>
-</div>
-
-<div class="card" onclick="showCategory('gk')">
-<div class="icon">🌍</div>
-<h3>General Knowledge</h3>
-<p>GK Questions</p>
-</div>
-
-<div class="card" onclick="showCategory('universe')">
-<div class="icon">🌌</div>
-<h3>Universe</h3>
-<p>Space and planets</p>
-</div>
-
-<div class="card" onclick="showCategory('facts')">
-<div class="icon">💡</div>
-<h3>Amazing Facts</h3>
-<p>Interesting facts</p>
-</div>
-
-</div>
-
-</div>
-
-
-<!-- ENGLISH -->
-
-<section id="english" class="lesson">
-
-<button class="back" onclick="showHome()">← Home</button>
-
-<h2>🇬🇧 English Learning</h2>
-
-<div class="cards">
-
-<div class="card" onclick="showLesson('spoken')">
-<div class="icon">🗣️</div>
-<h3>Spoken English</h3>
-</div>
-
-<div class="card" onclick="showLesson('daily')">
-<div class="icon">💬</div>
-<h3>Daily Sentences</h3>
-</div>
-
-<div class="card" onclick="showLesson('introduction')">
-<div class="icon">🙋</div>
-<h3>Self Introduction</h3>
-</div>
-
-<div class="card" onclick="showLesson('conversation')">
-<div class="icon">👥</div>
-<h3>Conversation</h3>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- GRAMMAR -->
-
-<section id="grammar" class="lesson">
-
-<button class="back" onclick="showHome()">← Home</button>
-
-<h2>📖 English Grammar</h2>
-
-<div class="cards">
-
-<div class="card" onclick="showLesson('articles')">
-<div class="icon">🔤</div>
-<h3>Articles</h3>
-<p>A, An, The</p>
-</div>
-
-<div class="card" onclick="showLesson('pronouns')">
-<div class="icon">👤</div>
-<h3>Pronouns</h3>
-</div>
-
-<div class="card" onclick="showLesson('prepositions')">
-<div class="icon">📍</div>
-<h3>Prepositions</h3>
-</div>
-
-<div class="card" onclick="showLesson('tense')">
-<div class="icon">⏰</div>
-<h3>Tense</h3>
-</div>
-
-<div class="card" onclick="showLesson('verbs')">
-<div class="icon">🏃</div>
-<h3>Verbs</h3>
-</div>
-
-<div class="card" onclick="showLesson('am_is_are')">
-<div class="icon">✏️</div>
-<h3>Am / Is / Are</h3>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ARTICLES -->
-
-<section id="articles" class="lesson">
-
-<button class="back" onclick="showCategory('grammar')">← Grammar</button>
-
-<h2>📖 Articles</h2>
-
-<div class="topic">
-
-<h3>A</h3>
-
-<p>Use <b>A</b> before a consonant sound.</p>
-
-<div class="example">
-A boy.<br>
-A cat.<br>
-A book.
-</div>
-
-</div>
-
-<div class="topic">
-
-<h3>An</h3>
-
-<p>Use <b>An</b> before a vowel sound.</p>
-
-<div class="example">
-An apple.<br>
-An elephant.<br>
-An umbrella.
-</div>
-
-</div>
-
-<div class="topic">
-
-<h3>The</h3>
-
-<p>Use <b>The</b> for a particular person, place or thing.</p>
-
-<div class="example">
-The sun.<br>
-The moon.<br>
-The book on the table.
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PRONOUNS -->
-
-<section id="pronouns" class="lesson">
-
-<button class="back" onclick="showCategory('grammar')">← Grammar</button>
-
-<h2>👤 Pronouns</h2>
-
-<div class="topic">
-
-<h3>Common Pronouns</h3>
-
-<p>I — আমি</p>
-<p>You — তুমি / আপনি</p>
-<p>He — সে (ছেলে)</p>
-<p>She — সে (মেয়ে)</p>
-<p>It — এটি</p>
-<p>We — আমরা</p>
-<p>They — তারা</p>
-
-</div>
-
-</section>
-
-
-<!-- PREPOSITIONS -->
-
-<section id="prepositions" class="lesson">
-
-<button class="back" onclick="showCategory('grammar')">← Grammar</button>
-
-<h2>📍 Prepositions</h2>
-
-<div class="topic">
-
-<h3>In</h3>
-<p>The book is <b>in</b> the bag.</p>
-
-<h3>On</h3>
-<p>The book is <b>on</b> the table.</p>
-
-<h3>Under</h3>
-<p>The cat is <b>under</b> the table.</p>
-
-<h3>Behind</h3>
-<p>The boy is <b>behind</b> the door.</p>
-
-<h3>Between</h3>
-<p>The ball is <b>between</b> the boxes.</p>
-
-</div>
-
-</section>
-
-
-<!-- TENSE -->
-
-<section id="tense" class="lesson">
-
-<button class="back" onclick="showCategory('grammar')">← Grammar</button>
-
-<h2>⏰ Tense</h2>
-
-<div class="topic">
-
-<h3>Present Tense</h3>
-<p>I play football.</p>
-
-<h3>Past Tense</h3>
-<p>I played football.</p>
-
-<h3>Future Tense</h3>
-<p>I will play football.</p>
-
-</div>
-
-</section>
-
-
-<!-- VERBS -->
-
-<section id="verbs" class="lesson">
-
-<button class="back" onclick="showCategory('grammar')">← Grammar</button>
-
-<h2>🏃 Verbs</h2>
-
-<div class="topic">
-
-<p>Go → Went → Gone</p>
-<p>Eat → Ate → Eaten</p>
-<p>Write → Wrote → Written</p>
-<p>Come → Came → Come</p>
-<p>See → Saw → Seen</p>
-
-</div>
-
-</section>
-
-
-<!-- AM IS ARE -->
-
-<section id="am_is_are" class="lesson">
-
-<button class="back" onclick="showCategory('grammar')">← Grammar</button>
-
-<h2>✏️ Am / Is / Are</h2>
-
-<div class="topic">
-
-<p>I <b>am</b> a student.</p>
-
-<p>He <b>is</b> a boy.</p>
-
-<p>She <b>is</b> happy.</p>
-
-<p>They <b>are</b> students.</p>
-
-<p>We <b>are</b> friends.</p>
-
-</div>
-
-</section>
-
-
-<!-- VOCABULARY -->
-
-<section id="vocabulary" class="lesson">
-
-<button class="back" onclick="showHome()">← Home</button>
-
-<h2>📝 Vocabulary</h2>
-
-<div class="cards">
-
-<div class="card" onclick="showLesson('common_words')">
-<div class="icon">🔤</div>
-<h3>Common Words</h3>
-</div>
-
-<div class="card" onclick="showLesson('synonyms')">
-<div class="icon">🔄</div>
-<h3>Synonyms</h3>
-</div>
-
-<div class="card" onclick="showLesson('antonyms')">
-<div class="icon">↔️</div>
-<h3>Antonyms</h3>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- COMMON WORDS -->
-
-<section id="common_words" class="lesson">
-
-<button class="back" onclick="showCategory('vocabulary')">← Vocabulary</button>
-
-<h2>🔤 Common Words</h2>
-
-<div class="topic">
-
-<p>Happy — সুখী</p>
-<p>Beautiful — সুন্দর</p>
-<p>Big — বড়</p>
-<p>Small — ছোট</p>
-<p>Fast — দ্রুত</p>
-<p>Slow — ধীর</p>
-<p>Easy — সহজ</p>
-<p>Difficult — কঠিন</p>
-
-</div>
-
-</section>
-
-
-<!-- SYNONYMS -->
-
-<section id="synonyms" class="lesson">
-
-<button class="back" onclick="showCategory('vocabulary')">← Vocabulary</button>
-
-<h2>🔄 Synonyms</h2>
-
-<div class="topic">
-
-<p>Big — Large</p>
-<p>Small — Little</p>
-<p>Happy — Glad</p>
-<p>Fast — Quick</p>
-<p>Smart — Clever</p>
-<p>Begin — Start</p>
-
-</div>
-
-</section>
-
-
-<!-- ANTONYMS -->
-
-<section id="antonyms" class="lesson">
-
-<button class="back" onclick="showCategory('vocabulary')">← Vocabulary</button>
-
-<h2>↔️ Antonyms</h2>
-
-<div class="topic">
-
-<p>Big — Small</p>
-<p>Hot — Cold</p>
-<p>Day — Night</p>
-<p>Good — Bad</p>
-<p>Fast — Slow</p>
-<p>Happy — Sad</p>
-
-</div>
-
-</section>
-
-
-<!-- SCIENCE -->
-
-<section id="science" class="lesson">
-
-<button class="back" onclick="showHome()">← Home</button>
-
-<h2>🔬 Science</h2>
-
-<div class="cards">
-
-<div class="card" onclick="showLesson('human_body')">
-<div class="icon">🫀</div>
-<h3>Human Body</h3>
-</div>
-
-<div class="card" onclick="showLesson('plants')">
-<div class="icon">🌱</div>
-<h3>Plants</h3>
-</div>
-
-<div class="card" onclick="showLesson('animals')">
-<div class="icon">🐯</div>
-<h3>Animals</h3>
-</div>
-
-<div class="card" onclick="showLesson('physics')">
-<div class="icon">⚡</div>
-<h3>Physics</h3>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- HUMAN BODY -->
-
-<section id="human_body" class="lesson">
-
-<button class="back" onclick="showCategory('science')">← Science</button>
-
-<h2>🫀 Human Body</h2>
-
-<div class="topic">
-
-<p>❤️ Heart — pumps blood.</p>
-<p>🧠 Brain — controls the body.</p>
-<p>🫁 Lungs — help us breathe.</p>
-<p>🦴 Bones — support the body.</p>
-<p>👁️ Eyes — help us see.</p>
-
-</div>
-
-</section>
-
-
-<!-- PLANTS -->
-
-<section id="plants" class="lesson">
-
-<button class="back" onclick="showCategory('science')">← Science</button>
-
-<h2>🌱 Plants</h2>
-
-<div class="topic">
-
-<p>Plants make food through photosynthesis.</p>
-
-<p>Roots absorb water and minerals from the soil.</p>
-
-<p>Leaves usually make food for the plant.</p>
-
-</div>
-
-</section>
-
-
-<!-- ANIMALS -->
-
-<section id="animals" class="lesson">
-
-<button class="back" onclick="showCategory('science')">← Science</button>
-
-<h2>🐯 Animals</h2>
-
-<div class="topic">
-
-<p>Lion — King of the jungle</p>
-<p>Elephant — Largest land animal</p>
-<p>Blue whale — Largest known animal</p>
-<p>Cheetah — Very fast land animal</p>
-
-</div>
-
-</section>
-
-
-<!-- PHYSICS -->
-
-<section id="physics" class="lesson">
-
-<button class="back" onclick="showCategory('science')">← Science</button>
-
-<h2>⚡ Physics</h2>
-
-<div class="topic">
-
-<p>Force can change the motion of an object.</p>
-
-<p>Gravity pulls objects toward Earth.</p>
-
-<p>Light travels very fast.</p>
-
-</div>
-
-</section>
-
-
-<!-- MATH -->
-
-<section id="math" class="lesson">
-
-<button class="back" onclick="showHome()">← Home</button>
-
-<h2>➗ Mathematics</h2>
-
-<div class="cards">
-
-<div class="card" onclick="showLesson('basic_math')">
-<div class="icon">➕</div>
-<h3>Basic Math</h3>
-</div>
-
-<div class="card" onclick="showLesson('fractions')">
-<div class="icon">½</div>
-<h3>Fractions</h3>
-</div>
-
-<div class="card" onclick="showLesson('decimals')">
-<div class="icon">0.5</div>
-<h3>Decimals</h3>
-</div>
-
-<div class="card" onclick="showLesson('percentage')">
-<div class="icon">%</div>
-<h3>Percentage</h3>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- BASIC MATH -->
-
-<section id="basic_math" class="lesson">
-
-<button class="back" onclick="showCategory('math')">← Math</button>
-
-<h2>➕ Basic Math</h2>
-
-<div class="topic">
-
-<p>5 + 3 = 8</p>
-<p>10 - 4 = 6</p>
-<p>6 × 5 = 30</p>
-<p>20 ÷ 4 = 5</p>
-
-</div>
-
-</section>
-
-
-<!-- FRACTIONS -->
-
-<section id="fractions" class="lesson">
-
-<button class="back" onclick="showCategory('math')">← Math</button>
-
-<h2>½ Fractions</h2>
-
-<div class="topic">
-
-<p>1/2 = one-half</p>
-
-<p>1/4 = one-fourth</p>
-
-<p>3/4 = three-fourths</p>
-
-<p>2/10 = 0.2</p>
-
-</div>
-
-</section>
-
-
-<!-- DECIMALS -->
-
-<section id="decimals" class="lesson">
-
-<button class="back" onclick="showCategory('math')">← Math</button>
-
-<h2>0.5 Decimals</h2>
-
-<div class="topic">
-
-<p>5/10 = 0.5</p>
-
-<p>12/100 = 0.12</p>
-
-<p>45/1000 = 0.045</p>
-
-<p>5/1000 = 0.005</p>
-
-</div>
-
-</section>
-
-
-<!-- PERCENTAGE -->
-
-<section id="percentage" class="lesson">
-
-<button class="back" onclick="showCategory('math')">← Math</button>
-
-<h2>% Percentage</h2>
-
-<div class="topic">
-
-<p>50% = 50/100 = 0.5</p>
-
-<p>25% = 25/100 = 0.25</p>
-
-<p>10% = 10/100 = 0.10</p>
-
-</div>
-
-</section>
-
-
-<!-- GK -->
-
-<section id="gk" class="lesson">
-
-<button class="back" onclick="showHome()">← Home</button>
-
-<h2>🌍 General Knowledge</h2>
-
-<div class="cards">
-
-<div class="card" onclick="showLesson('world_gk')">
-<div class="icon">🌎</div>
-<h3>World GK</h3>
-</div>
-
-<div class="card" onclick="showLesson('india_gk')">
-<div class="icon">🇮🇳</div>
-<h3>India GK</h3>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- WORLD GK -->
-
-<section id="world_gk" class="lesson">
-
-<button class="back" onclick="showCategory('gk')">← GK</button>
-
-<h2>🌎 World GK</h2>
-
-<div class="topic">
-
-<p><b>Q:</b> Which is the smallest country in the world?</p>
-<p><b>Answer:</b> Vatican City</p>
-
-<p><b>Q:</b> Which country is called the Land of the Rising Sun?</p>
-<p><b>Answer:</b> Japan</p>
-
-<p><b>Q:</b> Which country is famous for the Great Wall?</p>
-<p><b>Answer:</b> China</p>
-
-</div>
-
-</section>
-
-
-<!-- INDIA GK -->
-
-<section id="india_gk" class="lesson">
-
-<button class="back" onclick="showCategory('gk')">← GK</button>
-
-<h2>🇮🇳 India GK</h2>
-
-<div class="topic">
-
-<p><b>Q:</b> What is the capital of India?</p>
-<p><b>Answer:</b> New Delhi</p>
-
-<p><b>Q:</b> What is the national animal of India?</p>
-<p><b>Answer:</b> Bengal Tiger</p>
-
-<p><b>Q:</b> What is the national bird of India?</p>
-<p><b>Answer:</b> Peacock</p>
-
-</div>
-
-</section>
-
-
-<!-- UNIVERSE -->
-
-<section id="universe" class="lesson">
-
-<button class="back" onclick="showHome()">← Home</button>
-
-<h2>🌌 Universe</h2>
-
-<div class="topic">
-
-<p>☀️ The Sun is a star.</p>
-
-<p>🌍 Earth is a planet.</p>
-
-<p>🌙 The Moon is Earth's natural satellite.</p>
-
-<p>🔴 Mars is known as the Red Planet.</p>
-
-<p>🪐 Saturn is famous for its beautiful rings.</p>
-
-</div>
-
-</section>
-
-
-<!-- AMAZING FACTS -->
-
-<section id="facts" class="lesson">
-
-<button class="back" onclick="showHome()">← Home</button>
-
-<h2>💡 Amazing Facts</h2>
-
-<div class="topic">
-
-<p>🐙 Octopuses have three hearts.</p>
-
-<p>🍯 Honey can last for a very long time when properly stored.</p>
-
-<p>🌈 A rainbow is formed when light interacts with water droplets.</p>
-
-<p>🌍 Earth is the third planet from the Sun.</p>
-
-<p>🦋 Butterflies taste using sensors on their feet.</p>
-
-</div>
-
-</section>
-
-
-<!-- SPOKEN ENGLISH -->
-
-<section id="spoken" class="lesson">
-
-<button class="back" onclick="showCategory('english')">← English</button>
-
-<h2>🗣️ Spoken English</h2>
-
-<div class="topic">
-
-<p>Hello! How are you?</p>
-<p>I am fine. Thank you.</p>
-<p>What are you doing?</p>
-<p>Where are you going?</p>
-<p>Can you help me?</p>
-<p>Nice to meet you.</p>
-
-</div>
-
-</section>
-
-
-<!-- DAILY SENTENCES -->
-
-<section id="daily" class="lesson">
-
-<button class="back" onclick="showCategory('english')">← English</button>
-
-<h2>💬 Daily English Sentences</h2>
-
-<div class="topic">
-
-<p>Please give me some water.</p>
-
-<p>I am going to school.</p>
-
-<p>What is your name?</p>
-
-<p>Where do you live?</p>
-
-<p>See you tomorrow.</p>
-
-</div>
-
-</section>
-
-
-<!-- SELF INTRODUCTION -->
-
-<section id="introduction" class="lesson">
-
-<button class="back" onclick="showCategory('english')">← English</button>
-
-<h2>🙋 Self Introduction</h2>
-
-<div class="topic">
-
-<p>Hello everyone!</p>
-
-<p>My name is ______.</p>
-
-<p>I am from ______.</p>
-
-<p>I am a student.</p>
-
-<p>My hobbies are reading and learning new things.</p>
-
-<p>Nice to meet you all.</p>
-
+<h2>📚 Choose a Topic</h2>
+<div class="cards" id="topicCards"></div>
 </div>
-
-</section>
-
-
-<!-- CONVERSATION -->
-
-<section id="conversation" class="lesson">
 
-<button class="back" onclick="showCategory('english')">← English</button>
-
-<h2>👥 English Conversation</h2>
-
-<div class="topic">
-
-<p><b>A:</b> Good morning!</p>
-
-<p><b>B:</b> Good morning! How are you?</p>
-
-<p><b>A:</b> I am fine. How about you?</p>
-
-<p><b>B:</b> I am fine too. Thank you.</p>
-
+<div id="quizPage" class="lesson">
+<button class="back" onclick="goHome()">← Home</button>
+<h2 id="quizTitle"></h2>
+<div id="quizArea"></div>
 </div>
 
-</section>
-
 </div>
-
-
-<footer>
-
-<p>© 2026 Learn English & Amazing Facts</p>
-
-<p>Learn • Practice • Discover</p>
-
-</footer>
-
 
-<!-- IMPORTANT JAVASCRIPT -->
+<footer>© 2026 Learn English & Amazing Facts</footer>
 
 <script>
 
-function hideAllPages(){
+const quizData={
 
-    /* Hide Home */
-    var home = document.getElementById("home");
+"Articles":[
+["I saw ___ apple.","A","An","The","No article",1],
+["___ sun rises in the east.","A","An","The","No article",2],
+["She has ___ umbrella.","A","An","The","No article",1],
+["He is ___ honest man.","A","An","The","No article",1],
+["I bought ___ book.","A","An","The","No article",0],
+["___ moon shines at night.","A","An","The","No article",2],
+["She is ___ teacher.","A","An","The","No article",0],
+["He ate ___ orange.","A","An","The","No article",1],
+["This is ___ best book.","A","An","The","No article",2],
+["I saw ___ elephant.","A","An","The","No article",1],
+["He is ___ university student.","A","An","The","No article",0],
+["She waited for ___ hour.","A","An","The","No article",1],
+["I have ___ pen.","A","An","The","No article",0],
+["___ Earth moves around the Sun.","A","An","The","No article",2],
+["He wants to be ___ engineer.","A","An","The","No article",1],
+["This is ___ interesting story.","A","An","The","No article",1],
+["I saw ___ dog in the street.","A","An","The","No article",0],
+["___ Ganges is a river.","A","An","The","No article",2],
+["She is ___ European girl.","A","An","The","No article",0],
+["He plays ___ guitar.","A","An","The","No article",2]
+],
 
-    if(home){
-        home.style.display = "none";
-    }
+"Pronouns":[
+["Rina is a girl. ___ is happy.","He","She","It","They",1],
+["Rahul is my friend. ___ is kind.","He","She","It","We",0],
+["The dog is hungry. ___ needs food.","He","She","It","They",2],
+["Tom and I are friends. ___ play together.","They","We","He","You",1],
+["This book belongs to me. It is ___.","mine","yours","his","hers",0],
+["This pen belongs to you. It is ___.","mine","yours","his","ours",1],
+["Riya has a bag. It is ___.","his","hers","ours","theirs",1],
+["They have a house. It is ___.","ours","theirs","mine","yours",1],
+["I saw Rahul. I spoke to ___.","he","him","his","they",1],
+["She gave ___ a gift.","I","me","my","mine",1],
+["This is ___ book.","I","me","my","mine",2],
+["The children are playing. ___ are happy.","He","She","They","It",2],
+["You and I should help ___.","ourselves","himself","herself","itself",0],
+["The cat cleaned ___.","himself","herself","itself","themselves",2],
+["Rahul and Rina did it ___.","himself","herself","themselves","itself",2],
+["Who is there? It is ___.","I","me","my","mine",1],
+["That is my sister. ___ is a doctor.","He","She","It","They",1],
+["These are my books. They are ___.","mine","yours","his","hers",0],
+["This is your pencil. It is ___.","mine","yours","ours","theirs",1],
+["We enjoyed ___.","ourselves","himself","herself","itself",0]
+],
 
-    /* Hide every lesson */
-    var lessons = document.querySelectorAll(".lesson");
+"Prepositions":[
+["The book is ___ the table.","in","on","at","under",1],
+["The cat is ___ the box.","in","on","at","over",0],
+["The shoes are ___ the bed.","under","in","at","between",0],
+["He lives ___ India.","on","at","in","to",2],
+["School starts ___ 10 o'clock.","in","on","at","from",2],
+["I was born ___ July.","at","on","in","to",2],
+["We go to school ___ Monday.","in","at","on","from",2],
+["She walked ___ the room.","into","on","at","under",0],
+["The bird flew ___ the tree.","above","in","at","between",0],
+["The ball is ___ the chair.","behind","in","at","to",0],
+["He sat ___ me.","beside","under","into","from",0],
+["The shop is ___ the bank and school.","between","under","at","from",0],
+["He came ___ Kolkata.","to","from","in","on",1],
+["I am going ___ school.","from","to","under","at",1],
+["She is good ___ English.","in","on","at","from",2],
+["We have been here ___ Monday.","for","since","at","on",1],
+["He waited ___ two hours.","since","for","at","in",1],
+["The plane flew ___ the clouds.","above","between","under","at",0],
+["She stood ___ the door.","at","in","on","from",0],
+["The children ran ___ the house.","into","at","on","between",0]
+],
 
-    lessons.forEach(function(page){
-        page.classList.remove("active");
-    });
-}
+"Tense":[
+["I ___ to school every day.","go","went","gone","going",0],
+["She ___ TV yesterday.","watch","watches","watched","watching",2],
+["They ___ football now.","play","played","are playing","plays",2],
+["He ___ his homework already.","finish","finished","has finished","finishing",2],
+["I ___ him tomorrow.","see","saw","will see","seen",2],
+["We ___ dinner last night.","eat","ate","eaten","eating",1],
+["She ___ here since morning.","is","was","has been","be",2],
+["He ___ when I called.","sleep","slept","was sleeping","sleeps",2],
+["They ___ the work by tomorrow.","finish","finished","will have finished","finishing",2],
+["I ___ English for two years.","learn","learned","have been learning","learning",2],
+["She ___ to Delhi last week.","go","went","gone","going",1],
+["He usually ___ early.","wake","wakes","woke","waking",1],
+["We ___ lunch now.","have","had","are having","has",2],
+["I ___ this movie before.","see","saw","have seen","seeing",2],
+["They ___ here yesterday.","are","were","is","be",1],
+["He ___ tomorrow.","comes","came","will come","coming",2],
+["She ___ a letter now.","writes","wrote","is writing","write",2],
+["I ___ breakfast every morning.","eat","ate","eating","eaten",0],
+["We ___ the match yesterday.","win","won","winning","wins",1],
+["He ___ his work before dinner.","finished","finishes","had finished","finish",2]
+],
 
+"Verbs":[
+["Birds ___ in the sky.","fly","flies","flying","flew",0],
+["She ___ a song.","sing","sings","singing","sung",1],
+["They ___ football.","play","plays","playing","played",0],
+["He ___ milk every morning.","drink","drinks","drinking","drank",1],
+["I ___ English.","learn","learns","learning","learned",0],
+["The baby ___ loudly.","cry","cries","crying","cried",1],
+["We ___ to school.","go","goes","going","went",0],
+["Rahul ___ a bicycle.","ride","rides","riding","rode",1],
+["She ___ the door.","open","opens","opening","opened",1],
+["They ___ the work.","do","does","doing","did",0],
+["He ___ fast.","run","runs","running","ran",1],
+["I ___ a book.","read","reads","reading","read",0],
+["The dog ___ its tail.","wag","wags","wagging","wagged",1],
+["We ___ dinner.","cook","cooks","cooking","cooked",0],
+["She ___ beautiful pictures.","draw","draws","drawing","drew",1],
+["He ___ the ball.","kick","kicks","kicking","kicked",1],
+["They ___ loudly.","laugh","laughs","laughing","laughed",0],
+["I ___ my room.","clean","cleans","cleaning","cleaned",0],
+["She ___ a letter.","write","writes","writing","wrote",1],
+["He ___ the truth.","tell","tells","telling","told",1]
+],
 
-function showHome(){
+"Am / Is / Are":[
+["I ___ a student.","am","is","are","be",0],
+["She ___ happy.","am","is","are","be",1],
+["They ___ ready.","am","is","are","be",2],
+["We ___ friends.","am","is","are","be",2],
+["He ___ my brother.","am","is","are","be",1],
+["You ___ kind.","am","is","are","be",2],
+["It ___ a cat.","am","is","are","be",1],
+["I ___ hungry.","am","is","are","be",0],
+["The boys ___ playing.","am","is","are","be",2],
+["Rina ___ a teacher.","am","is","are","be",1],
+["The flowers ___ beautiful.","am","is","are","be",2],
+["My father ___ at home.","am","is","are","be",1],
+["We ___ learning English.","am","is","are","be",2],
+["I ___ ready.","am","is","are","be",0],
+["He ___ tall.","am","is","are","be",1],
+["You ___ my friend.","am","is","are","be",2],
+["The dog ___ hungry.","am","is","are","be",1],
+["They ___ students.","am","is","are","be",2],
+["She ___ reading.","am","is","are","be",1],
+["I ___ from India.","am","is","are","be",0]
+],
 
-    hideAllPages();
+"Common Words":[
+["Opposite of hot is ___.","cold","warm","big","fast",0],
+["A place where we study is a ___.","hospital","school","market","bank",1],
+["We use a ___ to write.","book","pen","chair","shoe",1],
+["We sleep on a ___.","table","bed","door","road",1],
+["We drink ___.","water","stone","paper","wood",0],
+["The color of grass is usually ___.","red","green","blue","black",1],
+["A baby dog is called a ___.","kitten","puppy","calf","cub",1],
+["A baby cat is called a ___.","puppy","kitten","foal","chick",1],
+["We see with our ___.","ears","eyes","nose","hands",1],
+["We hear with our ___.","eyes","ears","mouth","legs",1],
+["We smell with our ___.","nose","eyes","ears","hands",0],
+["We walk with our ___.","hands","legs","ears","eyes",1],
+["The opposite of big is ___.","long","small","tall","wide",1],
+["The opposite of fast is ___.","slow","quick","high","strong",0],
+["A person who teaches is a ___.","doctor","teacher","farmer","driver",1],
+["A person who treats sick people is a ___.","teacher","doctor","pilot","farmer",1],
+["We use an umbrella when it ___.","snows","rains","shines","blows",1],
+["The opposite of day is ___.","morning","night","evening","noon",1],
+["We use a clock to know the ___.","color","time","size","name",1],
+["A place where we buy things is a ___.","market","school","park","hospital",0]
+],
 
-    var home = document.getElementById("home");
+"Synonyms":[
+["Synonym of happy?","sad","glad","angry","weak",1],
+["Synonym of big?","small","large","short","thin",1],
+["Synonym of fast?","slow","quick","late","weak",1],
+["Synonym of smart?","clever","dull","sad","slow",0],
+["Synonym of begin?","end","start","stop","finish",1],
+["Synonym of beautiful?","ugly","pretty","bad","weak",1],
+["Synonym of angry?","calm","furious","happy","kind",1],
+["Synonym of small?","tiny","huge","large","tall",0],
+["Synonym of silent?","quiet","loud","noisy","bright",0],
+["Synonym of rich?","poor","wealthy","weak","slow",1],
+["Synonym of difficult?","easy","hard","simple","light",1],
+["Synonym of easy?","hard","simple","difficult","heavy",1],
+["Synonym of smart?","clever","foolish","lazy","slow",0],
+["Synonym of old?","ancient","new","young","fresh",0],
+["Synonym of answer?","question","reply","problem","ask",1],
+["Synonym of help?","assist","hurt","stop","break",0],
+["Synonym of gift?","present","problem","work","book",0],
+["Synonym of job?","work","rest","game","sleep",0],
+["Synonym of story?","tale","number","answer","question",0],
+["Synonym of home?","house","school","market","road",0]
+],
 
-    if(home){
-        home.style.display = "block";
-    }
+"Antonyms":[
+["Antonym of hot?","warm","cold","heat","fire",1],
+["Antonym of big?","large","small","huge","wide",1],
+["Antonym of fast?","quick","slow","rapid","speedy",1],
+["Antonym of happy?","glad","sad","joyful","cheerful",1],
+["Antonym of old?","ancient","young","past","aged",1],
+["Antonym of rich?","wealthy","poor","money","strong",1],
+["Antonym of easy?","simple","hard","light","soft",1],
+["Antonym of clean?","dirty","fresh","pure","clear",0],
+["Antonym of early?","soon","late","quick","fast",1],
+["Antonym of strong?","powerful","weak","hard","brave",1],
+["Antonym of light?","bright","dark","white","clear",1],
+["Antonym of tall?","high","short","long","big",1],
+["Antonym of open?","close","wide","free","start",0],
+["Antonym of full?","empty","complete","whole","filled",0],
+["Antonym of true?","right","false","correct","real",1],
+["Antonym of near?","close","far","here","beside",1],
+["Antonym of laugh?","smile","cry","happy","joy",1],
+["Antonym of love?","like","hate","care","help",1],
+["Antonym of day?","morning","night","noon","light",1],
+["Antonym of high?","low","tall","up","top",0]
+],
 
-    window.scrollTo(0,0);
-}
+"Human Body":[
+["Which organ pumps blood?","Brain","Heart","Lung","Kidney",1],
+["Which organ helps us think?","Heart","Brain","Liver","Skin",1],
+["How many eyes do humans normally have?","1","2","3","4",1],
+["How many ears do humans normally have?","1","2","3","4",1],
+["Which organ helps us breathe?","Lungs","Heart","Stomach","Brain",0],
+["Which organ digests food?","Stomach","Heart","Brain","Eye",0],
+["What protects the brain?","Ribs","Skull","Skin","Leg",1],
+["How many fingers are on one hand?","4","5","6","10",1],
+["How many toes are on two feet?","5","8","10","12",2],
+["Which organ filters blood and makes urine?","Kidney","Heart","Lung","Brain",0],
+["Which sense organ helps us see?","Ear","Eye","Nose","Tongue",1],
+["Which organ helps us hear?","Eye","Ear","Nose","Skin",1],
+["Which organ helps us smell?","Tongue","Nose","Ear","Eye",1],
+["Which organ helps us taste?","Tongue","Nose","Ear","Skin",0],
+["What covers most of our body?","Skin","Bone","Blood","Muscle",0],
+["How many bones does an adult human have approximately?","106","206","306","406",1],
+["Which organ is mainly responsible for pumping blood?","Liver","Heart","Kidney","Lung",1],
+["What carries oxygen in blood?","Red blood cells","Bones","Skin","Nerves",0],
+["Which part connects muscles to bones?","Tendon","Hair","Skin","Nail",0],
+["Which part of the body bends the arm?","Elbow","Knee","Ankle","Neck",0]
+],
 
+"Plants":[
+["Which part absorbs water from soil?","Leaf","Root","Flower","Fruit",1],
+["Which part makes food?","Root","Leaf","Stem","Seed",1],
+["Plants need sunlight for ___.","photosynthesis","sleep","walking","hearing",0],
+["Which gas do plants take in?","Oxygen","Carbon dioxide","Nitrogen only","Hydrogen",1],
+["Which gas do plants release during photosynthesis?","Oxygen","Carbon dioxide","Hydrogen","Helium",0],
+["Which part supports the plant?","Stem","Flower","Fruit","Seed",0],
+["Which part becomes fruit after fertilization?","Flower","Root","Leaf","Stem",0],
+["What grows underground?","Root","Flower","Leaf","Fruit",0],
+["Which is a flowering plant?","Rose","Moss","Fern","Algae",0],
+["Which plant gives us cotton?","Cotton plant","Rose","Mango","Neem",0],
+["Which tree gives mangoes?","Mango tree","Neem tree","Pine tree","Banana plant",0],
+["Which part contains seeds in many plants?","Fruit","Root","Stem","Leaf",0],
+["What do seeds need to germinate?","Water","Plastic","Metal","Glass",0],
+["Which plant is known for thorns?","Rose","Rice","Wheat","Banana",0],
+["Which plant gives us rice?","Rice plant","Rose","Mango","Neem",0],
+["Which tree is famous for its medicinal leaves?","Neem","Apple","Pine","Coconut",0],
+["Which plant gives coconut?","Coconut palm","Mango","Rose","Wheat",0],
+["Which part attracts insects with color and smell?","Flower","Root","Stem","Bark",0],
+["What is the green pigment in leaves?","Chlorophyll","Hemoglobin","Melanin","Keratin",0],
+["Plants prepare food mainly in their ___.","roots","leaves","flowers","fruits",1]
+],
 
-function showCategory(id){
+"Animals":[
+["Which is the largest land animal?","Elephant","Lion","Tiger","Horse",0],
+["Which animal is called the king of the jungle?","Tiger","Lion","Elephant","Bear",1],
+["Which animal gives us wool?","Sheep","Cow","Dog","Horse",0],
+["Which animal gives us milk?","Cow","Lion","Tiger","Fox",0],
+["Which is the fastest land animal?","Cheetah","Horse","Lion","Tiger",0],
+["Which animal is known for its long neck?","Giraffe","Zebra","Elephant","Camel",0],
+["Which animal has a trunk?","Elephant","Horse","Cow","Goat",0],
+["Which animal is called the ship of the desert?","Camel","Horse","Elephant","Donkey",0],
+["Which animal can change its color?","Chameleon","Dog","Cow","Horse",0],
+["Which animal lives in water and breathes through gills?","Fish","Dog","Cat","Cow",0],
+["Which bird cannot fly?","Eagle","Penguin","Parrot","Crow",1],
+["Which animal is famous for black and white stripes?","Zebra","Tiger","Cow","Horse",0],
+["Which animal is the largest mammal?","Blue whale","Elephant","Giraffe","Shark",0],
+["Which animal lays eggs?","Hen","Cow","Dog","Cat",0],
+["Which insect makes honey?","Bee","Ant","Fly","Mosquito",0],
+["Which animal has a pouch?","Kangaroo","Tiger","Lion","Horse",0],
+["Which animal is known for its memory?","Elephant","Dog","Cat","Rabbit",0],
+["Which animal is called man's best friend?","Dog","Cat","Cow","Horse",0],
+["Which animal has eight legs?","Spider","Ant","Bee","Butterfly",0],
+["Which animal is a reptile?","Snake","Cow","Dog","Horse",0]
+],
 
-    hideAllPages();
+"Physics":[
+["What is the SI unit of force?","Joule","Newton","Watt","Pascal",1],
+["What is the SI unit of energy?","Newton","Joule","Watt","Volt",1],
+["What is the SI unit of power?","Watt","Joule","Newton","Ohm",0],
+["What is the SI unit of electric current?","Volt","Ampere","Ohm","Watt",1],
+["What is the SI unit of voltage?","Ampere","Volt","Watt","Joule",1],
+["What force pulls objects toward Earth?","Friction","Gravity","Magnetism","Heat",1],
+["What travels fastest?","Sound","Light","Water","Wind",1],
+["Sound needs a medium to travel.","True","False","Maybe","None",0],
+["What is used to measure temperature?","Barometer","Thermometer","Ammeter","Speedometer",1],
+["What is used to measure electric current?","Ammeter","Voltmeter","Thermometer","Barometer",0],
+["What is the unit of resistance?","Ohm","Volt","Ampere","Watt",0],
+["A push or pull is called ___.","energy","force","power","speed",1],
+["Speed is distance divided by ___.","mass","time","force","energy",1],
+["Which energy comes from the Sun?","Solar energy","Sound energy","Chemical energy","Nuclear only",0],
+["A magnet attracts ___.","wood","iron","plastic","paper",1],
+["Which simple machine is a seesaw?","Lever","Pulley","Wheel","Screw",0],
+["Which form of energy is stored in food?","Chemical","Sound","Light","Electrical",0],
+["What causes objects to slow down when rubbing?","Gravity","Friction","Light","Sound",1],
+["Which material is a good conductor?","Copper","Rubber","Wood","Plastic",0],
+["Light travels in a ___.","curved line only","straight line","circle","zigzag only",1]
+],
 
-    var page = document.getElementById(id);
-
-    if(page){
-        page.classList.add("active");
-    }
-
-    window.scrollTo(0,0);
-}
-
-
-function showLesson(id){
-
-    hideAllPages();
-
-    var page = document.getElementById(id);
-
-    if(page){
-        page.classList.add("active");
-    }
-
-    window.scrollTo(0,0);
-}
-
-
-/* Start website on Home */
-
-document.addEventListener("DOMContentLoaded", function(){
-
-    showHome();
-
-});
-
-</script>
-
-</body>
-    </html>
-    
+"Basic Math":[
+["5 + 7 = ?","10","11","12","13",2],
+["15 - 6 = ?","7","8","9","10",2],
+["6 × 4 = ?","20","24","26","28",1],
+["20 ÷ 5 = ?","2","3","4","5",2],
+["9 + 8 = ?","16","17","18","19",1],
+["30 - 12 = ?","16","18","20","22",1],
+["7 × 8 = ?","54","56","58","60",1],
+["45 ÷ 9 = ?","4","5","6","7",1],
+["12 × 5 = ?","50","55","60","65",2],
+["100 - 45 = ?","45","50","55","60",2],
+["25 + 35 = ?","50","55","60","65",2],
+["81 ÷ 9 = ?","7",
