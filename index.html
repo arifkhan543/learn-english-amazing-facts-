@@ -1,229 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 
-<meta name="google-site-verification"
-content="sVmUWQIDhJOkeMyHiIEUMv7dI8L9bCLRFJ6z2mkmavE">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="google-site-verification" content="sVmUWQIDhJOkeMyHiIEUMv7dI8L9bCLRFJ6z2mkmavE">
 
 <title>Learn English & Amazing Facts</title>
 
 <style>
+
 *{
-  box-sizing:border-box;
+box-sizing:border-box;
 }
 
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f2f7ff;
-  color:#222;
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#eef7ff,#ffffff);
+color:#222;
 }
 
 header{
-  background:linear-gradient(135deg,#1769aa,#673ab7);
-  color:white;
-  text-align:center;
-  padding:25px 15px;
+background:linear-gradient(135deg,#4facfe,#00c6ff);
+color:white;
+text-align:center;
+padding:25px 15px;
 }
 
-header img{
-  width:80px;
-  height:80px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid white;
+.profile{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid white;
+margin-bottom:10px;
 }
 
 header h1{
-  margin:10px 0 5px;
-  font-size:25px;
+margin:5px 0;
+font-size:28px;
 }
 
 header p{
-  margin:0;
+margin:5px 0;
+font-size:15px;
 }
 
 .container{
-  max-width:900px;
-  margin:auto;
-  padding:20px;
+max-width:1000px;
+margin:auto;
+padding:20px;
 }
 
 #home h2{
-  text-align:center;
-  color:#333;
+text-align:center;
+color:#1565c0;
+margin-bottom:20px;
 }
 
 .cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:15px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:15px;
 }
 
 .card{
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  text-align:center;
-  box-shadow:0 3px 12px rgba(0,0,0,.12);
-  cursor:pointer;
-  transition:.2s;
+background:white;
+padding:20px 10px;
+border-radius:15px;
+text-align:center;
+font-size:17px;
+font-weight:bold;
+box-shadow:0 4px 12px rgba(0,0,0,0.12);
+cursor:pointer;
+transition:0.2s;
+border:2px solid transparent;
 }
 
 .card:hover{
-  transform:translateY(-4px);
+transform:translateY(-4px);
+border-color:#4facfe;
 }
 
 .icon{
-  font-size:40px;
-}
-
-.card h3{
-  margin:10px 0 5px;
+font-size:35px;
+display:block;
+margin-bottom:8px;
 }
 
 .lesson{
-  display:none;
+display:none;
 }
 
 .lesson.active{
-  display:block;
+display:block;
 }
 
-.back,.restart{
-  border:0;
-  background:#333;
-  color:white;
-  padding:10px 18px;
-  border-radius:8px;
-  cursor:pointer;
-  margin-bottom:15px;
+.back{
+background:#555;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:8px;
+cursor:pointer;
+margin-bottom:15px;
+font-size:15px;
 }
 
 .quizbox{
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  box-shadow:0 3px 12px rgba(0,0,0,.12);
-}
-
-.qtext{
-  font-size:20px;
-  font-weight:bold;
-  margin-bottom:20px;
-}
-
-.option{
-  display:block;
-  width:100%;
-  padding:14px;
-  margin:10px 0;
-  border:2px solid #ddd;
-  border-radius:10px;
-  background:#fafafa;
-  cursor:pointer;
-  font-size:16px;
-  text-align:left;
-}
-
-.option:hover{
-  background:#eef5ff;
-}
-
-.option:disabled{
-  cursor:default;
-}
-
-.correct{
-  background:#d9f7df !important;
-  border-color:#27ae60 !important;
-}
-
-.wrong{
-  background:#ffe0e0 !important;
-  border-color:#e74c3c !important;
-}
-
-.result{
-  font-weight:bold;
-  font-size:18px;
-  margin:15px 0;
-}
-
-.score{
-  text-align:center;
-  font-size:20px;
-  font-weight:bold;
+background:white;
+border-radius:18px;
+padding:22px;
+box-shadow:0 5px 18px rgba(0,0,0,0.15);
+max-width:700px;
+margin:auto;
 }
 
 .progress{
-  text-align:center;
-  color:#666;
-  margin-bottom:15px;
+font-weight:bold;
+color:#1565c0;
+margin-bottom:15px;
+}
+
+.qtext{
+font-size:21px;
+font-weight:bold;
+margin-bottom:20px;
+line-height:1.4;
+}
+
+.option{
+display:block;
+width:100%;
+padding:14px;
+margin:10px 0;
+border:2px solid #ddd;
+border-radius:10px;
+background:#f8fbff;
+font-size:17px;
+text-align:left;
+cursor:pointer;
+}
+
+.option:hover{
+background:#eaf5ff;
+border-color:#4facfe;
+}
+
+.option:disabled{
+cursor:default;
+}
+
+.option.correct{
+background:#c8f7c5;
+border-color:#28a745;
+}
+
+.option.wrong{
+background:#ffd0d0;
+border-color:#dc3545;
+}
+
+.result{
+font-size:19px;
+font-weight:bold;
+text-align:center;
+margin:15px 0;
+min-height:25px;
+}
+
+.score{
+text-align:center;
+font-weight:bold;
+color:#1565c0;
+}
+
+.final{
+text-align:center;
+padding:20px;
+}
+
+.final h2{
+color:#1565c0;
+}
+
+.try{
+background:#1565c0;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:10px;
+font-size:17px;
+cursor:pointer;
+margin:8px;
 }
 
 footer{
-  margin-top:30px;
-  background:#111827;
-  color:white;
-  text-align:center;
-  padding:20px;
+text-align:center;
+padding:25px;
+margin-top:30px;
+background:#eeeeee;
+color:#555;
 }
+
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-<img src="profile.jpg.png" alt="Profile">
+<img src="profile.jpg.png" class="profile" alt="Profile">
 
 <h1>Learn English & Amazing Facts</h1>
 
-<p>Interactive Quiz • English • GK • Science • Math</p>
+<p>Learn • Practice • Quiz • Discover</p>
 
 </header>
 
 
 <div class="container">
 
-<div id="home">
+<section id="home">
 
-<h2>📚 Choose a Topic</h2>
+<h2>Choose a Topic</h2>
 
 <div class="cards" id="topicCards"></div>
 
-</div>
+</section>
 
 
-<div id="quizPage" class="lesson">
+<section id="quizPage" class="lesson">
 
-<button class="back" onclick="goHome()">← Back</button>
-
-<h2 id="quizTitle"></h2>
+<button class="back" onclick="showHome()">← Back to Home</button>
 
 <div id="quizArea"></div>
 
-</div>
+</section>
 
 </div>
 
 
 <footer>
 
-© 2026 Learn English & Amazing Facts
+Learn English & Amazing Facts © 2026
 
 </footer>
 
 
 <script>
-
-/* =========================
-   10 QUESTIONS
-========================= */
 
 const quizData = {
 
@@ -540,311 +569,166 @@ const quizData = {
 ],
 
 "Conversation":[
-["A: Good morning! B: ___","Good morning!","Good night!","Goodbye yesterday!","I am fine.",0],
-["A: How are you? B: ___","I am fine, thank you.","I am a pen.","At school.","It is blue.",0],
-["A: What is your hobby? B: ___","I like reading.","I am fourteen.","I live here.","It is Monday.",0],
-["A: See you tomorrow. B: ___","See you!","Good morning!","Thank you yesterday.","What is this?",0],
-["A: Would you like some water? B: ___","Yes, please.","I am a student.","It is red.","At home.",0],
-["A: Excuse me. B: ___","Yes?","Good night.","Thank you yesterday.","I am blue.",0],
-["A: Are you ready? B: ___","Yes, I am.","Yes, I do.","It is a pen.","At home.",0],
-["A: Can I borrow your pen? B: ___","Sure, here you are.","I am fourteen.","Good night.","It is Monday.",0],
-["A: Where is the bus stop? B: ___","It is near the market.","I am fine.","I like cricket.","Yes, I do.",0],
-["A: Thank you for your help. B: ___","You're welcome.","Goodbye yesterday.","I am late.","It is blue.",0]
+["A: How are you? B: ___","I am fine.","I am a book.","It is blue.","Good night!",0],
+["A: What is your name? B: ___","My name is Rahim.","I am fine.","Goodbye.","Yes, I do.",0],
+["A: Where do you live? B: ___","I live in India.","I am twelve.","It is red.","Thank you.",0],
+["A: What are you doing? B: ___","I am studying.","I am from India.","Good morning.","It is mine.",0],
+["A: Can you help me? B: ___","Sure, I can.","Good night.","I am ten.","It is Monday.",0],
+["A: What time is it? B: ___","It is five o'clock.","I am fine.","My name is Ali.","Yes, I can.",0],
+["A: Where are you going? B: ___","I am going to school.","I am happy.","It is a pen.","Good evening.",0],
+["A: Nice to meet you. B: ___","Nice to meet you too.","I am hungry.","Good night yesterday.","It is green.",0],
+["A: Thank you for your help. B: ___","You're welcome.","Goodbye yesterday.","I am late.","It is blue.",0],
+["A: See you tomorrow. B: ___","See you tomorrow.","I am fine.","Thank you yesterday.","It is red.",0]
 ]
-
 };
-
-["Choose the correct article: ___ apple","A","An","The","No article",1],
-
-["What is the opposite of HOT?","Warm","Cold","Big","Fast",1],
-
-["What is the plural of CHILD?","Childs","Childes","Children","Child",2],
-
-["Choose the correct sentence.","He are happy.","He am happy.","He is happy.","He be happy.",2],
-
-["What is the past tense of GO?","Goed","Going","Gone","Went",3],
-
-["Which word is a pronoun?","Book","Run","He","Beautiful",2],
-
-["What is the synonym of HAPPY?","Sad","Angry","Joyful","Weak",2],
-
-["Choose the correct preposition: The book is ___ the table.","in","on","at","from",1],
-
-["Which one is a noun?","Quickly","Beautiful","Teacher","Run",2],
-
-["Which sentence is correct?","She have a pen.","She has a pen.","She having a pen.","She haves a pen.",1]
-
-]
-
-};
-
-
-/* =========================
-   ICONS
-========================= */
 
 const icons = {
-
-"English Quiz":"📚"
-
+"Articles":"🔤",
+"Pronouns":"👤",
+"Prepositions":"📍",
+"Tense":"⏰",
+"Verbs":"🏃",
+"Am / Is / Are":"📝",
+"Common Words":"📖",
+"Synonyms":"🔄",
+"Antonyms":"↔️",
+"Human Body":"🧍",
+"Plants":"🌱",
+"Animals":"🐯",
+"Physics":"⚡",
+"Basic Math":"➗",
+"Fractions":"🍕",
+"Decimals":"🔢",
+"Percentage":"💯",
+"World GK":"🌍",
+"India GK":"🇮🇳",
+"Universe":"🌌",
+"Amazing Facts":"🤯",
+"Spoken English":"🗣️",
+"Daily Sentences":"💬",
+"Self Introduction":"🙋",
+"Conversation":"👥"
 };
-
 
 let currentTopic="";
 let currentQuestion=0;
 let score=0;
 let answered=false;
 
-
-/* =========================
-   BUILD HOME
-========================= */
-
 function buildHome(){
-
-const box=document.getElementById("topicCards");
-
-box.innerHTML="";
-
-Object.keys(quizData).forEach(function(topic){
-
-const div=document.createElement("div");
-
-div.className="card";
-
-div.onclick=function(){
-
-startQuiz(topic);
-
-};
-
-div.innerHTML=
-"<div class='icon'>"+icons[topic]+"</div>"+
-"<h3>"+topic+"</h3>"+
-"<p>10 Questions</p>";
-
-box.appendChild(div);
-
-});
-
+  let html="";
+  Object.keys(quizData).forEach(function(topic){
+    html+=
+      "<div class='card' onclick='startQuiz("+JSON.stringify(topic)+")'>"+
+      "<span class='icon'>"+(icons[topic] || "📚")+"</span>"+
+      topic+
+      "</div>";
+  });
+  document.getElementById("topicCards").innerHTML=html;
 }
 
-
-/* =========================
-   START QUIZ
-========================= */
+function showHome(){
+  document.getElementById("home").style.display="block";
+  document.getElementById("quizPage").classList.remove("active");
+  window.scrollTo(0,0);
+}
 
 function startQuiz(topic){
+  currentTopic=topic;
+  currentQuestion=0;
+  score=0;
+  answered=false;
 
-currentTopic=topic;
+  document.getElementById("home").style.display="none";
+  document.getElementById("quizPage").classList.add("active");
 
-currentQuestion=0;
-
-score=0;
-
-answered=false;
-
-document.getElementById("home").style.display="none";
-
-document.getElementById("quizPage").classList.add("active");
-
-document.getElementById("quizTitle").innerText=topic;
-
-showQuestion();
-
-window.scrollTo(0,0);
-
+  showQuestion();
+  window.scrollTo(0,0);
 }
-
-
-/* =========================
-   SHOW QUESTION
-========================= */
 
 function showQuestion(){
+  const item=quizData[currentTopic][currentQuestion];
 
-const item=quizData[currentTopic][currentQuestion];
+  let html="";
+  html+="<div class='quizbox'>";
+  html+="<div class='progress'>Question "+(currentQuestion+1)+" of "+quizData[currentTopic].length+"</div>";
+  html+="<div class='qtext'>"+item[0]+"</div>";
 
-let html="";
+  for(let i=1;i<=4;i++){
+    html+="<button class='option' id='opt"+(i-1)+"' onclick='checkAnswer("+(i-1)+")'>"+
+      String.fromCharCode(65+i-1)+") "+item[i]+
+      "</button>";
+  }
 
-html+=
-"<div class='quizbox'>";
+  html+="<div id='result' class='result'></div>";
+  html+="<div class='score'>Score: "+score+"</div>";
+  html+="</div>";
 
-html+=
-"<div class='progress'>Question "+
-(currentQuestion+1)+
-" of "+
-quizData[currentTopic].length+
-"</div>";
-
-html+=
-"<div class='qtext'>"+
-item[0]+
-"</div>";
-
-
-for(let i=1;i<=4;i++){
-
-html+=
-"<button class='option' id='opt"+(i-1)+
-"' onclick='checkAnswer("+(i-1)+")'>"+
-String.fromCharCode(65+i-1)+") "+
-item[i]+
-"</button>";
-
+  document.getElementById("quizArea").innerHTML=html;
+  answered=false;
 }
-
-
-html+=
-"<div id='result' class='result'></div>";
-
-html+=
-"<div class='score'>Score: "+
-score+
-"</div>";
-
-html+="</div>";
-
-document.getElementById("quizArea").innerHTML=html;
-
-answered=false;
-
-}
-
-
-/* =========================
-   CHECK ANSWER
-========================= */
 
 function checkAnswer(choice){
+  if(answered){
+    return;
+  }
 
-if(answered){
+  answered=true;
 
-return;
+  const item=quizData[currentTopic][currentQuestion];
+  const buttons=document.querySelectorAll(".option");
 
+  buttons.forEach(function(btn){
+    btn.disabled=true;
+  });
+
+  if(choice===item[5]){
+    score++;
+    document.getElementById("opt"+choice).classList.add("correct");
+    document.getElementById("result").innerHTML="✅ Correct Answer!";
+  }else{
+    document.getElementById("opt"+choice).classList.add("wrong");
+    document.getElementById("opt"+item[5]).classList.add("correct");
+    document.getElementById("result").innerHTML="❌ Wrong Answer!";
+  }
+
+  setTimeout(function(){
+    currentQuestion++;
+
+    if(currentQuestion<quizData[currentTopic].length){
+      showQuestion();
+    }else{
+      showFinalScore();
+    }
+  },1000);
 }
-
-answered=true;
-
-const item=quizData[currentTopic][currentQuestion];
-
-const buttons=document.querySelectorAll(".option");
-
-buttons.forEach(function(btn){
-
-btn.disabled=true;
-
-});
-
-
-if(choice===item[5]){
-
-score++;
-
-document.getElementById("opt"+choice)
-.classList.add("correct");
-
-document.getElementById("result")
-.innerHTML="✅ Correct Answer!";
-
-}
-
-else{
-
-document.getElementById("opt"+choice)
-.classList.add("wrong");
-
-document.getElementById("opt"+item[5])
-.classList.add("correct");
-
-document.getElementById("result")
-.innerHTML="❌ Wrong Answer!";
-
-}
-
-
-/* NEXT QUESTION */
-
-setTimeout(function(){
-
-currentQuestion++;
-
-if(currentQuestion<
-quizData[currentTopic].length){
-
-showQuestion();
-
-}
-
-else{
-
-showFinalScore();
-
-}
-
-},1000);
-
-}
-
-
-/* =========================
-   FINAL SCORE
-========================= */
 
 function showFinalScore(){
+  let total=quizData[currentTopic].length;
 
-let total=quizData[currentTopic].length;
+  let html="";
+  html+="<div class='quizbox final'>";
+  html+="<h2>🎉 Quiz Completed!</h2>";
+  html+="<h3>"+currentTopic+"</h3>";
+  html+="<p>Your Score</p>";
+  html+="<h1>"+score+" / "+total+"</h1>";
 
-document.getElementById("quizArea").innerHTML=
+  if(score===total){
+    html+="<p>🏆 Perfect Score!</p>";
+  }else if(score>=total/2){
+    html+="<p>👏 Good Job!</p>";
+  }else{
+    html+="<p>💪 Keep Practicing!</p>";
+  }
 
-"<div class='quizbox'>"+
-"<h2 style='text-align:center'>🎉 Quiz Completed!</h2>"+
-"<div class='score'>"+
-"You scored "+
-score+
-" / "+
-total+
-"</div>"+
-"<p style='text-align:center'>"+
-"Great job! Keep learning! 📚"+
-"</p>"+
-"<button class='restart' onclick='startQuiz(currentTopic)'>"+
-"🔄 Try Again"+
-"</button>"+
-"</div>";
+  html+="<button class='try' onclick='startQuiz("+JSON.stringify(currentTopic)+")'>Try Again</button>";
+  html+="<button class='try' onclick='showHome()'>Back to Home</button>";
+  html+="</div>";
 
+  document.getElementById("quizArea").innerHTML=html;
 }
-
-
-/* =========================
-   GO HOME
-========================= */
-
-function goHome(){
-
-document.getElementById("quizPage")
-.classList.remove("active");
-
-document.getElementById("home")
-.style.display="block";
-
-window.scrollTo(0,0);
-
-}
-
-
-/* =========================
-   START
-========================= */
-
-document.addEventListener(
-"DOMContentLoaded",
-function(){
 
 buildHome();
-
-}
-);
 
 </script>
 
