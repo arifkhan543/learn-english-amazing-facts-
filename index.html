@@ -1,736 +1,680 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="google-site-verification" content="sVmUWQIDhJOkeMyHiIEUMv7dI8L9bCLRFJ6z2mkmavE">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Learn English & Amazing Facts</title>
+<meta name="description" content="Learn English grammar, spoken English, vocabulary, quizzes, science, mathematics, general knowledge and amazing facts.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Learn English & Amazing Facts">
+<meta property="og:description" content="Learn English grammar, practise spoken English and test your knowledge with quizzes.">
+<meta name="google-site-verification" content="sVmUWQIDhJOkeMyHiIEUMv7dI8L9bCLRFJ6z2mkmavE">
+<link rel="canonical" href="https://arifkhan543.github.io/learn-english-amazing-facts-/">
 
 <style>
-
-*{
-box-sizing:border-box;
-}
-
+*{box-sizing:border-box}
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#eef7ff,#ffffff);
-color:#222;
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#f4f7fb;
+ color:#222;
 }
-
 header{
-background:linear-gradient(135deg,#4facfe,#00c6ff);
-color:white;
-text-align:center;
-padding:25px 15px;
+ background:linear-gradient(135deg,#4f46e5,#06b6d4);
+ color:white;
+ text-align:center;
+ padding:24px 12px;
 }
-
-.profile{
-width:90px;
-height:90px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid white;
-margin-bottom:10px;
+header img{
+ width:85px;
+ height:85px;
+ border-radius:50%;
+ object-fit:cover;
+ border:4px solid white;
 }
-
-header h1{
-margin:5px 0;
-font-size:28px;
+header h1{margin:10px 0 5px;font-size:27px}
+header p{margin:0}
+.container{width:94%;max-width:1000px;margin:18px auto}
+.intro{
+ max-width:850px;
+ margin:18px auto 24px;
+ padding:18px;
+ background:white;
+ border-radius:14px;
+ box-shadow:0 3px 12px #0001;
+ line-height:1.65;
 }
-
-header p{
-margin:5px 0;
-font-size:15px;
+h2{text-align:center;color:#4f46e5}
+.section-title{margin-top:28px}
+.learn-cards{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:13px;
+ margin:14px 0 24px;
 }
-
-.container{
-max-width:1000px;
-margin:auto;
-padding:20px;
+.learn-card{
+ background:white;
+ padding:17px;
+ border-radius:14px;
+ box-shadow:0 3px 12px #0001;
+ cursor:pointer;
+ border:1px solid #e5e7eb;
 }
-
-#home h2{
-text-align:center;
-color:#1565c0;
-margin-bottom:20px;
-}
-
+.learn-card h3{margin:0 0 8px;color:#2563eb}
+.learn-card p{margin:0;line-height:1.5;color:#444}
 .cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:15px;
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
+ gap:13px;
 }
-
 .card{
-background:white;
-padding:20px 10px;
-border-radius:15px;
-text-align:center;
-font-size:17px;
-font-weight:bold;
-box-shadow:0 4px 12px rgba(0,0,0,0.12);
-cursor:pointer;
-transition:0.2s;
-border:2px solid transparent;
+ background:white;
+ padding:18px 10px;
+ border-radius:15px;
+ text-align:center;
+ box-shadow:0 3px 12px #0001;
+ cursor:pointer;
 }
-
-.card:hover{
-transform:translateY(-4px);
-border-color:#4facfe;
-}
-
-.icon{
-font-size:35px;
-display:block;
-margin-bottom:8px;
-}
-
+.card:active{transform:scale(.98)}
+.icon{font-size:34px}
+.card h3{margin:7px 0 2px;font-size:16px}
+.card p{margin:4px 0;color:#666;font-size:13px}
 .lesson{
-display:none;
+ display:none;
+ background:white;
+ padding:18px;
+ border-radius:15px;
+ box-shadow:0 3px 12px #0001;
 }
-
-.lesson.active{
-display:block;
+.lesson.active{display:block}
+.lesson-content{line-height:1.7}
+.lesson-content h3{color:#2563eb}
+.lesson-content li{margin:6px 0}
+.example{
+ background:#eff6ff;
+ padding:10px 13px;
+ border-left:4px solid #3b82f6;
+ border-radius:7px;
+ margin:10px 0;
 }
-
-.back{
-background:#555;
-color:white;
-border:none;
-padding:10px 18px;
-border-radius:8px;
-cursor:pointer;
-margin-bottom:15px;
-font-size:15px;
+.back,.restart{
+ border:0;
+ border-radius:8px;
+ padding:10px 16px;
+ color:white;
+ background:#4f46e5;
+ cursor:pointer;
 }
-
 .quizbox{
-background:white;
-border-radius:18px;
-padding:22px;
-box-shadow:0 5px 18px rgba(0,0,0,0.15);
-max-width:700px;
-margin:auto;
+ background:#f8fafc;
+ padding:15px;
+ border-radius:12px;
+ margin:15px 0;
 }
-
-.progress{
-font-weight:bold;
-color:#1565c0;
-margin-bottom:15px;
-}
-
-.qtext{
-font-size:21px;
-font-weight:bold;
-margin-bottom:20px;
-line-height:1.4;
-}
-
+.qtext{font-weight:bold;font-size:17px;margin-bottom:12px}
 .option{
-display:block;
-width:100%;
-padding:14px;
-margin:10px 0;
-border:2px solid #ddd;
-border-radius:10px;
-background:#f8fbff;
-font-size:17px;
-text-align:left;
-cursor:pointer;
+ display:block;
+ width:100%;
+ text-align:left;
+ padding:12px;
+ margin:8px 0;
+ border:1px solid #ddd;
+ border-radius:9px;
+ background:white;
+ cursor:pointer;
+ font-size:15px;
 }
-
-.option:hover{
-background:#eaf5ff;
-border-color:#4facfe;
-}
-
-.option:disabled{
-cursor:default;
-}
-
-.option.correct{
-background:#c8f7c5;
-border-color:#28a745;
-}
-
-.option.wrong{
-background:#ffd0d0;
-border-color:#dc3545;
-}
-
-.result{
-font-size:19px;
-font-weight:bold;
-text-align:center;
-margin:15px 0;
-min-height:25px;
-}
-
-.score{
-text-align:center;
-font-weight:bold;
-color:#1565c0;
-}
-
-.final{
-text-align:center;
-padding:20px;
-}
-
-.final h2{
-color:#1565c0;
-}
-
-.try{
-background:#1565c0;
-color:white;
-border:none;
-padding:12px 25px;
-border-radius:10px;
-font-size:17px;
-cursor:pointer;
-margin:8px;
-}
-
+.option:disabled{cursor:default}
+.correct{background:#dcfce7!important;border-color:#16a34a!important}
+.wrong{background:#fee2e2!important;border-color:#dc2626!important}
+.result{font-weight:bold;margin:10px 0}
+.score{font-size:20px;text-align:center;font-weight:bold;padding:12px}
+.progress{font-size:13px;color:#666}
 footer{
-text-align:center;
-padding:25px;
-margin-top:30px;
-background:#eeeeee;
-color:#555;
+ margin-top:25px;
+ background:#111827;
+ color:white;
+ text-align:center;
+ padding:18px;
 }
-
+@media(max-width:480px){
+ header h1{font-size:23px}
+ .container{width:94%}
+ .learn-cards{grid-template-columns:1fr}
+}
 </style>
-
 </head>
 
 <body>
-
 <header>
-
-<img src="profile.jpg.png" class="profile" alt="Profile">
-
+<img src="profile.jpg.png" alt="Learn English & Amazing Facts">
 <h1>Learn English & Amazing Facts</h1>
-
-<p>Learn • Practice • Quiz • Discover</p>
-
+<p>Learn • Practise • Quiz • Discover</p>
 </header>
 
-
 <div class="container">
-
-<section id="home">
-
-<h2>Choose a Topic</h2>
-
-<div class="cards" id="topicCards"></div>
-
+<div id="home">
+<section class="intro">
+<h2>Learn English & Amazing Facts</h2>
+<p>
+Welcome! Learn English grammar step by step, practise spoken English,
+improve vocabulary and test yourself with interactive quizzes.
+Explore mathematics, science, general knowledge and amazing facts.
+Choose a lesson to learn, then try a quiz to practise.
+</p>
 </section>
 
+<h2 class="section-title">📘 Learn English</h2>
+<div class="learn-cards">
+<article class="learn-card" onclick="openLesson('grammar')">
+<h3>📖 English Grammar</h3>
+<p>Learn articles, pronouns, prepositions, verbs and tenses with simple rules and examples.</p>
+</article>
 
-<section id="quizPage" class="lesson">
+<article class="learn-card" onclick="openLesson('spoken')">
+<h3>🗣️ Spoken English</h3>
+<p>Practise everyday English sentences with Bengali meanings and useful conversations.</p>
+</article>
 
-<button class="back" onclick="showHome()">← Back to Home</button>
-
-<div id="quizArea"></div>
-
-</section>
-
+<article class="learn-card" onclick="openLesson('vocabulary')">
+<h3>🔤 Vocabulary</h3>
+<p>Learn common words, synonyms, antonyms and example sentences.</p>
+</article>
 </div>
 
+<h2 class="section-title">📝 English Grammar Quiz, GK, Science & Math</h2>
+<p style="text-align:center">
+Choose a topic below and answer the questions. Your score appears at the end.
+</p>
+<div class="cards" id="topicCards"></div>
+</div>
 
-<footer>
+<div id="lessonPage" class="lesson">
+<button class="back" onclick="goHome()">← Home</button>
+<div id="lessonContent" class="lesson-content"></div>
+</div>
 
-Learn English & Amazing Facts © 2026
+<div id="quizPage" class="lesson">
+<button class="back" onclick="goHome()">← Home</button>
+<h2 id="quizTitle"></h2>
+<div id="quizArea"></div>
+</div>
+</div>
 
-</footer>
-
-
+<footer>© 2026 Learn English & Amazing Facts</footer>
 <script>
+let currentTopic = "";
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
 
-const quizData = {
+const lessonContent = {
+  grammar: `
+    <h2>📖 English Grammar for Beginners</h2>
 
-"Articles":[
-["I saw ___ apple.","a","an","the","no article",1],
-["She is ___ honest girl.","a","an","the","no article",1],
-["He bought ___ book.","a","an","the","no article",0],
-["___ sun rises in the east.","A","An","The","No article",2],
-["She wants to be ___ doctor.","a","an","the","no article",0],
-["I ate ___ orange.","a","an","the","no article",1],
-["This is ___ best book.","A","An","The","No article",2],
-["He has ___ umbrella.","a","an","the","no article",1],
-["My father is ___ teacher.","a","an","the","no article",0],
-["We saw ___ elephant.","a","an","the","no article",1]
-],
+    <h3>1. Articles: A, An, The</h3>
+    <p><b>A</b> consonant sound-এর আগে, <b>An</b> vowel sound-এর আগে এবং <b>The</b> নির্দিষ্ট ব্যক্তি বা বস্তুর আগে ব্যবহৃত হয়।</p>
+    <div class="example">
+      A book = একটি বই<br>
+      An apple = একটি আপেল<br>
+      The Sun = সূর্য
+    </div>
 
-"Pronouns":[
-["Rina is my friend. ___ is kind.","He","She","It","They",1],
-["Tom and Sam are brothers. ___ are students.","He","She","They","It",2],
-["This book belongs to me. It is ___.","mine","yours","hers","theirs",0],
-["I saw Rahul. I spoke to ___.","he","him","his","they",1],
-["This is my sister. ___ name is Maya.","His","Her","Their","Our",1],
-["We have a dog. ___ is friendly.","He","She","It","They",2],
-["These bags belong to us. They are ___.","ours","yours","theirs","hers",0],
-["Ali and I went home. ___ were tired.","We","They","He","She",0],
-["Give the pencil to Riya. Give it to ___.","she","her","hers","they",1],
-["The boys are playing. ___ are happy.","He","She","It","They",3]
-],
+    <h3>2. Pronouns</h3>
+    <p>Noun-এর পরিবর্তে Pronoun ব্যবহৃত হয়।</p>
+    <div class="example">
+      I = আমি<br>
+      You = তুমি/আপনি<br>
+      He = সে (ছেলে)<br>
+      She = সে (মেয়ে)<br>
+      It = এটি<br>
+      We = আমরা<br>
+      They = তারা
+    </div>
 
-"Prepositions":[
-["The book is ___ the table.","in","on","at","from",1],
-["The children are ___ the classroom.","in","on","to","from",0],
-["We arrive ___ school at 9 a.m.","in","on","at","from",2],
-["The cat is ___ the chair.","under","from","to","during",0],
-["She walked ___ the room.","into","on","at","since",0],
-["The plane flew ___ the clouds.","above","under","between","beside",0],
-["The shop is ___ the bank and school.","between","during","from","into",0],
-["He sat ___ his friend.","beside","into","above","from",0],
-["We have lived here ___ 2020.","for","since","at","on",1],
-["I waited ___ two hours.","since","for","at","into",1]
-],
+    <h3>3. Prepositions</h3>
+    <p>Preposition দিয়ে কোনো ব্যক্তি বা বস্তুর অবস্থান, সময় বা সম্পর্ক বোঝানো হয়।</p>
+    <div class="example">
+      The book is on the table. = বইটি টেবিলের উপর।<br>
+      The cat is under the chair. = বিড়ালটি চেয়ারের নিচে।<br>
+      I live in India. = আমি ভারতে থাকি।
+    </div>
 
-"Tense":[
-["She ___ to school every day.","go","goes","went","going",1],
-["They ___ football yesterday.","play","plays","played","playing",2],
-["I ___ my homework now.","do","did","am doing","have done",2],
-["He ___ here since morning.","is","was","has been","will",2],
-["We ___ dinner tomorrow.","ate","eat","will eat","eating",2],
-["She ___ a book last night.","reads","read","is reading","will read",1],
-["I ___ tea every morning.","drink","drank","am drinking","will drink",0],
-["They ___ TV now.","watch","watched","are watching","will watch",2],
-["He ___ the work before I arrived.","finishes","finished","had finished","will finish",2],
-["We ___ to the market tomorrow.","went","go","will go","going",2]
-],
+    <h3>4. Am, Is, Are</h3>
+    <div class="example">
+      I am a student. = আমি একজন ছাত্র/ছাত্রী।<br>
+      He is happy. = সে খুশি।<br>
+      They are friends. = তারা বন্ধু।
+    </div>
 
-"Verbs":[
-["Which word is a verb?","beautiful","run","happy","slow",1],
-["Birds ___ in the sky.","fly","flies","flying","flew",0],
-["She ___ a letter every week.","write","writes","writing","wrote",1],
-["They ___ cricket yesterday.","play","plays","played","playing",2],
-["He can ___ fast.","runs","ran","run","running",2],
-["Past form of go is:","goed","goes","went","going",2],
-["Past participle of eat is:","ate","eaten","eating","eats",1],
-["We ___ water every day.","drink","drinks","drank","drinking",0],
-["The baby is ___.","sleep","slept","sleeping","sleeps",2],
-["Please ___ the door.","open","opens","opened","opening",0]
-],
+    <h3>5. Tenses</h3>
+    <p>Tense দিয়ে কাজের সময় বোঝানো হয়।</p>
+    <div class="example">
+      Present: I play. = আমি খেলি।<br>
+      Past: I played. = আমি খেলেছিলাম।<br>
+      Future: I will play. = আমি খেলব।
+    </div>
 
-"Am / Is / Are":[
-["I ___ a student.","am","is","are","be",0],
-["She ___ happy.","am","is","are","be",1],
-["They ___ friends.","am","is","are","be",2],
-["We ___ ready.","am","is","are","be",2],
-["He ___ my brother.","am","is","are","be",1],
-["You ___ very kind.","am","is","are","be",2],
-["It ___ a cat.","am","is","are","be",1],
-["I ___ from India.","am","is","are","be",0],
-["The boys ___ playing.","am","is","are","be",2],
-["My mother ___ a teacher.","am","is","are","be",1]
-],
+    <h3>6. Verbs: V1, V2, V3</h3>
+    <div class="example">
+      Go – Went – Gone<br>
+      Eat – Ate – Eaten<br>
+      Write – Wrote – Written<br>
+      Speak – Spoke – Spoken
+    </div>
+  `,
 
-"Common Words":[
-["Opposite of hot?","cold","warm","big","fast",0],
-["What do we use to write?","spoon","pen","plate","shoe",1],
-["A place where we learn?","school","market","garden","station",0],
-["What do we drink when thirsty?","water","sand","paper","stone",0],
-["Which is a color?","blue","chair","run","quick",0],
-["What do we use to see?","ears","eyes","hands","feet",1],
-["Which is a day?","Monday","January","Summer","Morning",0],
-["Which is a month?","Friday","March","Winter","Night",1],
-["What do we use to cut paper?","scissors","pillow","cup","shoe",0],
-["Which means very large?","tiny","huge","short","slow",1]
-],
+  spoken: `
+    <h2>🗣️ Spoken English with Bengali Meaning</h2>
 
-"Synonyms":[
-["Synonym of happy:","sad","glad","angry","tired",1],
-["Synonym of big:","large","small","thin","short",0],
-["Synonym of quick:","slow","fast","late","weak",1],
-["Synonym of smart:","clever","lazy","noisy","cold",0],
-["Synonym of begin:","end","start","stop","close",1],
-["Synonym of silent:","quiet","loud","bright","busy",0],
-["Synonym of angry:","calm","mad","kind","happy",1],
-["Synonym of tiny:","huge","small","wide","long",1],
-["Synonym of easy:","simple","hard","rough","late",0],
-["Synonym of honest:","truthful","rude","weak","slow",0]
-],
+    <h3>Daily Use Sentences</h3>
 
-"Antonyms":[
-["Antonym of hot:","warm","cold","heat","boil",1],
-["Antonym of big:","large","huge","small","wide",2],
-["Antonym of early:","soon","late","fast","quick",1],
-["Antonym of happy:","glad","sad","kind","smile",1],
-["Antonym of strong:","powerful","weak","hard","brave",1],
-["Antonym of clean:","tidy","dirty","fresh","bright",1],
-["Antonym of old:","young","ancient","past","aged",0],
-["Antonym of easy:","simple","hard","soft","light",1],
-["Antonym of rich:","wealthy","poor","lucky","full",1],
-["Antonym of near:","close","far","next","beside",1]
-],
+    <div class="example">
+      <b>1. How are you?</b><br>
+      তুমি কেমন আছ?<br>
+      Answer: I am fine, thank you.<br>
+      অর্থ: আমি ভালো আছি, ধন্যবাদ।
+    </div>
 
-"Human Body":[
-["Which organ pumps blood?","Brain","Heart","Lung","Kidney",1],
-["Which organ helps us breathe?","Lung","Heart","Stomach","Skin",0],
-["How many eyes does a human normally have?","One","Two","Three","Four",1],
-["Which organ helps us think?","Brain","Liver","Heart","Lung",0],
-["Which body part is used for hearing?","Nose","Ear","Eye","Hand",1],
-["Which body part is used for smelling?","Ear","Nose","Foot","Finger",1],
-["Which organ helps digest food?","Stomach","Brain","Heart","Ear",0],
-["What protects the brain?","Skull","Rib","Knee","Ankle",0],
-["How many fingers are on two hands?","8","10","12","14",1],
-["Which organ filters waste from blood?","Kidney","Eye","Ear","Tongue",0]
-],
+    <div class="example">
+      <b>2. What is your name?</b><br>
+      তোমার নাম কী?<br>
+      Answer: My name is Arif.<br>
+      অর্থ: আমার নাম আরিফ।
+    </div>
 
-"Plants":[
-["Which part absorbs water from soil?","Root","Flower","Fruit","Leaf",0],
-["Which part makes food in green plants?","Leaf","Root","Flower","Seed",0],
-["Which gas do plants take in?","Oxygen","Carbon dioxide","Nitrogen","Hydrogen",1],
-["Which gas do plants release during photosynthesis?","Oxygen","Carbon dioxide","Nitrogen","Helium",0],
-["Which part supports a plant?","Stem","Fruit","Seed","Flower",0],
-["Process by which plants make food?","Respiration","Photosynthesis","Digestion","Germination",1],
-["Which part can grow into a new plant?","Seed","Leaf","Bark","Thorn",0],
-["Which part attracts pollinators?","Flower","Root","Stem","Bark",0],
-["Which pigment makes leaves green?","Chlorophyll","Hemoglobin","Melanin","Keratin",0],
-["Which is a tree?","Mango","Grass","Moss","Mushroom",0]
-],
+    <div class="example">
+      <b>3. Where do you live?</b><br>
+      তুমি কোথায় থাকো?<br>
+      Answer: I live in India.<br>
+      অর্থ: আমি ভারতে থাকি।
+    </div>
 
-"Animals":[
-["King of the jungle?","Tiger","Lion","Elephant","Bear",1],
-["Largest land animal?","Elephant","Giraffe","Horse","Rhino",0],
-["Which animal can fly?","Dog","Eagle","Cow","Tiger",1],
-["Which animal gives us wool?","Sheep","Cow","Horse","Dog",0],
-["Which animal has a long neck?","Giraffe","Zebra","Lion","Goat",0],
-["Which is a marine mammal?","Dolphin","Shark","Tuna","Octopus",0],
-["Which animal has black and white stripes?","Zebra","Camel","Deer","Fox",0],
-["Which bird has colorful tail feathers?","Peacock","Crow","Sparrow","Owl",0],
-["Which animal is famous for desert travel?","Camel","Penguin","Seal","Frog",0],
-["Fastest land animal?","Cheetah","Elephant","Horse","Lion",0]
-],
+    <div class="example">
+      <b>4. What are you doing?</b><br>
+      তুমি কী করছ?<br>
+      Answer: I am studying.<br>
+      অর্থ: আমি পড়াশোনা করছি।
+    </div>
 
-"Physics":[
-["What force pulls objects toward Earth?","Magnetism","Gravity","Friction","Heat",1],
-["SI unit of force?","Joule","Newton","Watt","Volt",1],
-["SI unit of energy?","Joule","Newton","Pascal","Ohm",0],
-["Which device measures temperature?","Thermometer","Barometer","Ammeter","Speedometer",0],
-["Energy from the Sun is called:","Solar energy","Sound energy","Chemical energy","Nuclear energy",0],
-["Which material conducts electricity well?","Copper","Rubber","Wood","Plastic",0],
-["Which force opposes motion?","Friction","Gravity","Buoyancy","Magnetism",0],
-["SI unit of power?","Watt","Joule","Newton","Meter",0],
-["Sound needs what to travel?","A medium","Darkness","A vacuum only","Sunlight",0],
-["What does a magnet attract strongly?","Iron","Glass","Paper","Wood",0]
-],
+    <div class="example">
+      <b>5. Thank you.</b><br>
+      ধন্যবাদ।<br>
+      Answer: You're welcome.<br>
+      অর্থ: তোমাকে স্বাগতম।
+    </div>
 
-"Basic Math":[
-["7 + 8 = ?","14","15","16","17",1],
-["20 - 9 = ?","9","10","11","12",2],
-["6 × 7 = ?","36","42","48","49",1],
-["56 ÷ 8 = ?","6","7","8","9",1],
-["13 + 19 = ?","30","31","32","33",2],
-["90 - 38 = ?","50","51","52","53",2],
-["9 × 5 = ?","40","45","50","55",1],
-["72 ÷ 9 = ?","6","7","8","9",2],
-["25 + 36 = ?","59","60","61","62",2],
-["100 - 47 = ?","52","53","54","55",1]
-],
+    <div class="example">
+      <b>6. Could you help me?</b><br>
+      তুমি কি আমাকে সাহায্য করতে পারবে?<br>
+      Answer: Yes, of course.<br>
+      অর্থ: হ্যাঁ, অবশ্যই।
+    </div>
 
-"Fractions":[
-["Which fraction is one-half?","1/2","1/3","2/3","3/4",0],
-["Which fraction is one-quarter?","1/2","1/3","1/4","3/4",2],
-["2/4 is equal to:","1/2","1/3","2/3","3/4",0],
-["Which is larger?","1/4","3/4","1/8","2/8",1],
-["3/5 + 1/5 = ?","3/5","4/5","5/5","2/5",1],
-["5/6 - 2/6 = ?","2/6","3/6","4/6","5/6",1],
-["1/3 + 1/3 = ?","1/3","2/3","3/3","1/6",1],
-["Which fraction equals 1 whole?","1/2","2/3","3/3","2/4",2],
-["4/8 simplifies to:","1/2","1/3","2/3","3/4",0],
-["7/10 as a decimal is:","0.07","0.7","7.0","0.17",1]
-],
+    <h3>Useful Conversation</h3>
+    <div class="example">
+      A: Hello! How are you?<br>
+      B: I am fine. How about you?<br>
+      A: I am fine too. Thank you.<br>
+      <br>
+      বাংলা অর্থ:<br>
+      A: হ্যালো! তুমি কেমন আছ?<br>
+      B: আমি ভালো আছি। তুমি কেমন আছ?<br>
+      A: আমিও ভালো আছি। ধন্যবাদ।
+    </div>
+  `,
 
-"Decimals":[
-["5/10 as a decimal?","0.05","0.5","5.0","0.15",1],
-["12/100 as a decimal?","0.12","1.2","0.012","12.0",0],
-["45/1000 as a decimal?","0.45","0.045","0.0045","4.5",1],
-["0.7 is equal to:","7/10","7/100","70/1000","1/7",0],
-["0.25 is equal to:","1/2","1/4","3/4","1/5",1],
-["0.50 is equal to:","0.05","0.5","5.0","0.005",1],
-["Which is greater?","0.3","0.03","0.003","0.13",0],
-["Which is smallest?","0.8","0.08","0.18","0.28",1],
-["2.5 + 1.2 = ?","3.5","3.7","3.8","4.7",1],
-["5.6 - 2.1 = ?","3.5","3.6","4.5","2.5",0]
-],
+  vocabulary: `
+    <h2>🔤 English Vocabulary</h2>
 
-"Percentage":[
-["50% is equal to:","1/2","1/4","3/4","1/5",0],
-["25% is equal to:","1/2","1/4","3/4","1/10",1],
-["10% of 100 is:","5","10","20","25",1],
-["20% of 50 is:","5","10","15","20",1],
-["75% of 100 is:","25","50","75","80",2],
-["5% of 200 is:","5","10","15","20",1],
-["100% means:","nothing","half","the whole","double",2],
-["0% means:","nothing","half","the whole","double",0],
-["50% of 40 is:","10","20","30","40",1],
-["25% of 80 is:","10","20","30","40",1]
-],
+    <h3>Common English Words</h3>
+    <div class="example">
+      Beautiful = সুন্দর<br>
+      Happy = খুশি<br>
+      Brave = সাহসী<br>
+      Honest = সৎ<br>
+      Clever = চালাক<br>
+      Kind = দয়ালু<br>
+      Difficult = কঠিন<br>
+      Easy = সহজ
+    </div>
 
-"World GK":[
-["Largest continent?","Africa","Asia","Europe","Australia",1],
-["Largest ocean?","Atlantic","Indian","Pacific","Arctic",2],
-["Land of the Rising Sun?","China","Japan","Thailand","Korea",1],
-["Country famous for the Great Wall?","India","China","Japan","Egypt",1],
-["Capital of France?","Rome","Paris","Madrid","Berlin",1],
-["Capital of Japan?","Tokyo","Seoul","Beijing","Bangkok",0],
-["Capital of USA?","New York","Washington, D.C.","Chicago","Boston",1],
-["Largest hot desert?","Sahara","Gobi","Kalahari","Atacama",0],
-["Highest mountain above sea level?","K2","Mount Everest","Makalu","Kangchenjunga",1],
-["Smallest country by area?","Monaco","Vatican City","Maldives","Singapore",1]
-],
+    <h3>Synonyms — সমার্থক শব্দ</h3>
+    <div class="example">
+      Big — Large = বড়<br>
+      Small — Little = ছোট<br>
+      Happy — Glad = খুশি<br>
+      Begin — Start = শুরু করা<br>
+      Quick — Fast = দ্রুত
+    </div>
 
-"India GK":[
-["Capital of India?","Mumbai","New Delhi","Kolkata","Chennai",1],
-["National animal of India?","Lion","Tiger","Elephant","Leopard",1],
-["National bird of India?","Peacock","Eagle","Sparrow","Swan",0],
-["National flower of India?","Rose","Lotus","Sunflower","Jasmine",1],
-["National fruit of India?","Apple","Mango","Banana","Orange",1],
-["Longest river in India?","Yamuna","Ganga","Godavari","Narmada",1],
-["Which city is the Pink City?","Jaipur","Delhi","Agra","Pune",0],
-["Which monument is in Agra?","Gateway of India","Taj Mahal","India Gate","Charminar",1],
-["India's Independence Day?","15 August","26 January","2 October","14 November",0],
-["India's Republic Day?","15 August","26 January","2 October","5 September",1]
-],
+    <h3>Antonyms — বিপরীত শব্দ</h3>
+    <div class="example">
+      Hot — Cold = গরম — ঠান্ডা<br>
+      Big — Small = বড় — ছোট<br>
+      Day — Night = দিন — রাত<br>
+      Happy — Sad = খুশি — দুঃখিত<br>
+      Early — Late = তাড়াতাড়ি — দেরি
+    </div>
 
-"Universe":[
-["Center of our solar system?","Moon","Sun","Polaris","Sirius",1],
-["Red Planet?","Venus","Mars","Jupiter","Mercury",1],
-["Largest planet?","Earth","Saturn","Jupiter","Neptune",2],
-["Planet closest to the Sun?","Mercury","Venus","Earth","Mars",0],
-["Planet famous for its rings?","Mars","Saturn","Mercury","Venus",1],
-["How many planets are in our solar system?","7","8","9","10",1],
-["Earth's natural satellite?","Sun","Moon","Mars","Venus",1],
-["Galaxy containing our solar system?","Andromeda","Milky Way","Whirlpool","Sombrero",1],
-["A pattern of stars is called a:","Constellation","Asteroid","Comet","Nebula",0],
-["Planet with the Great Red Spot?","Jupiter","Saturn","Neptune","Earth",0]
-],
-
-"Amazing Facts":[
-["Which animal has three hearts?","Dolphin","Octopus","Horse","Elephant",1],
-["Which mammal can truly fly?","Bat","Penguin","Ostrich","Elephant",0],
-["Fastest land animal?","Cheetah","Lion","Horse","Tiger",0],
-["Hottest planet in our solar system?","Mercury","Venus","Mars","Jupiter",1],
-["Which metal is liquid at room temperature?","Iron","Mercury","Copper","Aluminum",1],
-["Which animal can change its skin color?","Chameleon","Cow","Horse","Rabbit",0],
-["Approximate number of bones in an adult human?","106","206","306","406",1],
-["Which bird can fly backward?","Eagle","Hummingbird","Penguin","Owl",1],
-["Largest animal on Earth?","Elephant","Blue whale","Giraffe","Shark",1],
-["Which gas makes up most of Earth's atmosphere?","Oxygen","Nitrogen","Carbon dioxide","Hydrogen",1]
-],
-
-"Spoken English":[
-["How do you greet someone in the morning?","Good morning!","Good night!","Goodbye!","See you yesterday!",0],
-["What do you say when someone helps you?","Thank you.","Go away.","Good night.","I am late.",0],
-["What do you say when you make a mistake?","Sorry.","Hello.","Welcome.","Good morning.",0],
-["How do you ask someone's name?","What is your name?","Where is the book?","How old is the car?","What time is it?",0],
-["How do you ask about someone's health?","How are you?","Where are you?","What are you?","Who are you?",0],
-["Polite response to 'Thank you'?","You're welcome.","Good morning.","Excuse me.","Goodbye.",0],
-["How do you ask for permission?","May I come in?","I am coming.","Come here.","I came yesterday.",0],
-["How do you ask someone to repeat?","Could you repeat that, please?","Go away, please.","What is your job?","I am fine.",0],
-["How do you introduce yourself?","My name is Arif.","What is this?","See you later.","Thank you.",0],
-["How do you ask for the price?","How much is it?","Where are you?","Who is it?","What is your name?",0]
-],
-
-"Daily Sentences":[
-["How are you?","I am fine, thank you.","I am a book.","At school.","It is blue.",0],
-["What is your name?","My name is Arif.","I am at home.","It is Monday.","I am hungry.",0],
-["Where do you live?","I live in India.","I am fourteen.","It is red.","Yes, I do.",0],
-["What are you doing?","I am studying.","I am from India.","It is a pen.","Goodbye.",0],
-["When will you come?","Tomorrow.","At school.","I am Arif.","Yes, I am.",0],
-["Why are you late?","Because the bus was late.","I am blue.","At school.","Yes, I do.",0],
-["How old are you?","I am fourteen years old.","I live in India.","I like football.","It is red.",0],
-["Would you like some water?","Yes, please.","I am 14.","It is Monday.","At home.",0],
-["See you tomorrow.","See you!","Good morning!","Thank you yesterday.","What is this?",0],
-["What time is it?","It is five o'clock.","I am fine.","I live here.","Yes, please.",0]
-],
-
-"Self Introduction":[
-["Good way to start a self-introduction?","My name is...","Close the door.","What is this?","Good night.",0],
-["Sentence that tells your age?","I am fourteen years old.","I live in India.","My name is Arif.","I like cricket.",0],
-["Sentence that tells where you live?","I live in India.","I am a student.","I am happy.","My hobby is reading.",0],
-["Sentence that tells your occupation?","I am a student.","I live in Kolkata.","I am fourteen.","My name is Arif.",0],
-["Sentence that tells your hobby?","My hobby is reading.","I am a student.","I live in India.","I am fine.",0],
-["Sentence that tells your favorite sport?","My favorite sport is cricket.","I am fourteen.","I live in India.","My name is Arif.",0],
-["Polite ending for self-introduction?","Thank you.","Go away.","Be quiet.","No.",0],
-["Sentence that tells nationality?","I am Indian.","I am fourteen.","I am a student.","I like music.",0],
-["Sentence that introduces your family?","There are four people in my family.","I like football.","I live in India.","I am fine.",0],
-["Sentence that tells your favorite subject?","My favorite subject is English.","I am fourteen.","I live in India.","My name is Arif.",0]
-],
-
-"Conversation":[
-["A: How are you? B: ___","I am fine.","I am a book.","It is blue.","Good night!",0],
-["A: What is your name? B: ___","My name is Rahim.","I am fine.","Goodbye.","Yes, I do.",0],
-["A: Where do you live? B: ___","I live in India.","I am twelve.","It is red.","Thank you.",0],
-["A: What are you doing? B: ___","I am studying.","I am from India.","Good morning.","It is mine.",0],
-["A: Can you help me? B: ___","Sure, I can.","Good night.","I am ten.","It is Monday.",0],
-["A: What time is it? B: ___","It is five o'clock.","I am fine.","My name is Ali.","Yes, I can.",0],
-["A: Where are you going? B: ___","I am going to school.","I am happy.","It is a pen.","Good evening.",0],
-["A: Nice to meet you. B: ___","Nice to meet you too.","I am hungry.","Good night yesterday.","It is green.",0],
-["A: Thank you for your help. B: ___","You're welcome.","Goodbye yesterday.","I am late.","It is blue.",0],
-["A: See you tomorrow. B: ___","See you tomorrow.","I am fine.","Thank you yesterday.","It is red.",0]
-]
+    <h3>Example Sentences</h3>
+    <div class="example">
+      The flower is beautiful.<br>
+      অর্থ: ফুলটি সুন্দর।<br><br>
+      He is an honest boy.<br>
+      অর্থ: সে একজন সৎ ছেলে।<br><br>
+      English is easy to practise every day.<br>
+      অর্থ: প্রতিদিন অনুশীলন করলে ইংরেজি শেখা সহজ।
+    </div>
+  `
 };
 
-const icons = {
-"Articles":"🔤",
-"Pronouns":"👤",
-"Prepositions":"📍",
-"Tense":"⏰",
-"Verbs":"🏃",
-"Am / Is / Are":"📝",
-"Common Words":"📖",
-"Synonyms":"🔄",
-"Antonyms":"↔️",
-"Human Body":"🧍",
-"Plants":"🌱",
-"Animals":"🐯",
-"Physics":"⚡",
-"Basic Math":"➗",
-"Fractions":"🍕",
-"Decimals":"🔢",
-"Percentage":"💯",
-"World GK":"🌍",
-"India GK":"🇮🇳",
-"Universe":"🌌",
-"Amazing Facts":"🤯",
-"Spoken English":"🗣️",
-"Daily Sentences":"💬",
-"Self Introduction":"🙋",
-"Conversation":"👥"
-};
-
-let currentTopic="";
-let currentQuestion=0;
-let score=0;
-let answered=false;
-
-function buildHome(){
-  let html="";
-  Object.keys(quizData).forEach(function(topic){
-    html+=
-      "<div class='card' onclick='startQuiz("+JSON.stringify(topic)+")'>"+
-      "<span class='icon'>"+(icons[topic] || "📚")+"</span>"+
-      topic+
-      "</div>";
-  });
-  document.getElementById("topicCards").innerHTML=html;
-}
-
-function showHome(){
-  document.getElementById("home").style.display="block";
+function openLesson(name) {
+  document.getElementById("home").style.display = "none";
   document.getElementById("quizPage").classList.remove("active");
-  window.scrollTo(0,0);
+  document.getElementById("lessonPage").classList.add("active");
+
+  document.getElementById("lessonContent").innerHTML =
+    lessonContent[name] || "<h2>Lesson not found</h2>";
+
+  window.scrollTo(0, 0);
 }
 
-function startQuiz(topic){
-  currentTopic=topic;
-  currentQuestion=0;
-  score=0;
-  answered=false;
+function goHome() {
+  document.getElementById("quizPage").classList.remove("active");
+  document.getElementById("lessonPage").classList.remove("active");
+  document.getElementById("home").style.display = "block";
+  window.scrollTo(0, 0);
+}
+</script>
+<script>
+const quizData = {
+  "Articles": [
+    {q:"I saw ___ elephant.",o:["a","an","the","no article"],a:1},
+    {q:"She is ___ honest girl.",o:["a","an","the","no article"],a:1},
+    {q:"He has ___ book.",o:["a","an","the","no article"],a:0},
+    {q:"___ sun rises in the east.",o:["A","An","The","No article"],a:2},
+    {q:"I ate ___ apple.",o:["a","an","the","no article"],a:1}
+  ],
+  "Pronouns": [
+    {q:"Rina is a girl. ___ is kind.",o:["He","She","It","They"],a:1},
+    {q:"Rahul is my friend. ___ is helpful.",o:["She","It","He","We"],a:2},
+    {q:"This book belongs to me. It is ___.",o:["mine","my","me","I"],a:0},
+    {q:"They are playing. ___ are happy.",o:["We","He","They","She"],a:2},
+    {q:"I am a student. ___ study English.",o:["I","Me","Mine","My"],a:0}
+  ],
+  "Prepositions": [
+    {q:"The book is ___ the table.",o:["on","at","from","between"],a:0},
+    {q:"The cat is ___ the chair.",o:["under","during","from","to"],a:0},
+    {q:"I go to school ___ the morning.",o:["in","on","at","by"],a:0},
+    {q:"The school starts ___ 10 AM.",o:["in","on","at","for"],a:2},
+    {q:"He was born ___ Monday.",o:["in","on","at","from"],a:1}
+  ],
+  "Tense": [
+    {q:"She ___ to school every day.",o:["go","goes","going","gone"],a:1},
+    {q:"They ___ cricket yesterday.",o:["play","plays","played","playing"],a:2},
+    {q:"I ___ my homework now.",o:["do","did","am doing","does"],a:2},
+    {q:"He has ___ his work.",o:["finish","finishes","finished","finishing"],a:2},
+    {q:"We ___ watching TV.",o:["is","am","are","was"],a:2}
+  ],
+  "Verbs (V1/V2/V3)": [
+    {q:"What is the V2 of 'go'?",o:["goed","went","gone","going"],a:1},
+    {q:"What is the V3 of 'eat'?",o:["ate","eaten","eating","eats"],a:1},
+    {q:"What is the V2 of 'write'?",o:["written","wrote","writes","writing"],a:1},
+    {q:"What is the V3 of 'see'?",o:["saw","seen","seeing","sees"],a:1},
+    {q:"What is the V2 of 'come'?",o:["came","come","coming","comes"],a:0}
+  ],
+  "Am / Is / Are": [
+    {q:"I ___ a student.",o:["is","are","am","be"],a:2},
+    {q:"She ___ happy.",o:["am","are","is","be"],a:2},
+    {q:"They ___ friends.",o:["is","am","are","be"],a:2},
+    {q:"We ___ ready.",o:["is","am","are","was"],a:2},
+    {q:"It ___ a cat.",o:["are","am","is","were"],a:2}
+  ],
+  "Common Words": [
+    {q:"What is the opposite of 'hot'?",o:["Warm","Cold","Dry","Tall"],a:1},
+    {q:"What is the meaning of 'begin'?",o:["Start","Stop","Sleep","Close"],a:0},
+    {q:"Which word means 'quick'?",o:["Slow","Fast","Late","Weak"],a:1},
+    {q:"What is the opposite of 'big'?",o:["Large","Huge","Small","Tall"],a:2},
+    {q:"Which word means 'happy'?",o:["Glad","Sad","Angry","Tired"],a:0}
+  ],
+  "Synonyms": [
+    {q:"Choose a synonym of 'happy'.",o:["Sad","Glad","Angry","Weak"],a:1},
+    {q:"Choose a synonym of 'begin'.",o:["Start","Finish","Close","Stop"],a:0},
+    {q:"Choose a synonym of 'quick'.",o:["Slow","Fast","Quiet","Late"],a:1},
+    {q:"Choose a synonym of 'small'.",o:["Huge","Tiny","Wide","Long"],a:1},
+    {q:"Choose a synonym of 'smart'.",o:["Clever","Lazy","Weak","Rude"],a:0}
+  ],
+  "Antonyms": [
+    {q:"Opposite of 'early'?",o:["Soon","Late","Fast","Quick"],a:1},
+    {q:"Opposite of 'strong'?",o:["Powerful","Weak","Brave","Hard"],a:1},
+    {q:"Opposite of 'clean'?",o:["Neat","Dirty","Fresh","Pure"],a:1},
+    {q:"Opposite of 'light' (not heavy)?",o:["Bright","Heavy","White","Clear"],a:1},
+    {q:"Opposite of 'open'?",o:["Start","Unlock","Close","Begin"],a:2}
+  ],
+  "Human Body": [
+    {q:"Which organ pumps blood?",o:["Brain","Heart","Lung","Kidney"],a:1},
+    {q:"Which organ helps us think?",o:["Heart","Brain","Liver","Stomach"],a:1},
+    {q:"How many eyes do most people have?",o:["One","Two","Three","Four"],a:1},
+    {q:"Which body part helps us hear?",o:["Eyes","Ears","Nose","Hands"],a:1},
+    {q:"Which organ helps us breathe?",o:["Lungs","Stomach","Kidneys","Brain"],a:0}
+  ],
+  "Plants": [
+    {q:"Which part usually absorbs water from soil?",o:["Flower","Root","Fruit","Leaf"],a:1},
+    {q:"Which part often makes food for a plant?",o:["Leaf","Root","Flower","Seed"],a:0},
+    {q:"What do plants need from sunlight?",o:["Light energy","Plastic","Salt only","Smoke"],a:0},
+    {q:"Which part can develop into a fruit?",o:["Flower","Root","Bark","Thorn"],a:0},
+    {q:"What is a young plant called?",o:["Seedling","Pebble","Cloud","Mineral"],a:0}
+  ],
+  "Animals": [
+    {q:"Which animal is known as the king of the jungle?",o:["Lion","Goat","Rabbit","Deer"],a:0},
+    {q:"Which animal gives us wool?",o:["Cow","Sheep","Dog","Horse"],a:1},
+    {q:"Which animal can live both on land and in water?",o:["Frog","Camel","Cat","Eagle"],a:0},
+    {q:"Which is the largest land animal?",o:["Tiger","Elephant","Wolf","Fox"],a:1},
+    {q:"Which animal is known for its long neck?",o:["Giraffe","Zebra","Bear","Panda"],a:0}
+  ],
+  "Physics": [
+    {q:"What force pulls objects toward Earth?",o:["Gravity","Friction","Magnetism only","Sound"],a:0},
+    {q:"What is the unit of force?",o:["Metre","Newton","Litre","Gram"],a:1},
+    {q:"Which travels faster?",o:["Sound in air","Light","Both always equal","Neither"],a:1},
+    {q:"Which material is attracted to a magnet?",o:["Iron","Wood","Paper","Glass"],a:0},
+    {q:"What form of energy helps us see?",o:["Light","Sound","Smell","Taste"],a:0}
+  ],
+  "Basic Math": [
+    {q:"7 + 5 = ?",o:["10","11","12","13"],a:2},
+    {q:"9 × 6 = ?",o:["45","54","56","63"],a:1},
+    {q:"48 ÷ 6 = ?",o:["6","7","8","9"],a:2},
+    {q:"15 − 7 = ?",o:["6","7","8","9"],a:2},
+    {q:"12 × 4 = ?",o:["36","42","48","52"],a:2}
+  ],
+  "Fractions": [
+    {q:"Which fraction equals one-half?",o:["1/3","2/4","3/4","1/4"],a:1},
+    {q:"What is 1/4 + 1/4?",o:["1/8","1/2","3/4","1"],a:1},
+    {q:"Which is greater?",o:["1/4","1/2","They are equal","Cannot compare"],a:1},
+    {q:"What is half of 10?",o:["2","4","5","8"],a:2},
+    {q:"How many quarters make one whole?",o:["2","3","4","5"],a:2}
+  ],
+  "Decimals": [
+    {q:"What is 5/10 as a decimal?",o:["0.05","0.5","5.0","0.15"],a:1},
+    {q:"What is 25/100 as a decimal?",o:["2.5","0.25","0.025","25.0"],a:1},
+    {q:"0.7 means:",o:["7 tenths","7 hundredths","70 ones","7 thousands"],a:0},
+    {q:"2.5 + 1.5 = ?",o:["3","3.5","4","4.5"],a:2},
+    {q:"10 ÷ 100 = ?",o:["1","0.1","0.01","100"],a:1}
+  ],
+  "Percentage": [
+    {q:"What is 50% of 100?",o:["25","40","50","75"],a:2},
+    {q:"25% means:",o:["25 out of 100","25 out of 10","2 out of 5","50 out of 100"],a:0},
+    {q:"What is 10% of 200?",o:["10","20","30","40"],a:1},
+    {q:"100% means:",o:["Half","One quarter","The whole amount","One tenth"],a:2},
+    {q:"What is 50% of 60?",o:["20","25","30","35"],a:2}
+  ],
+  "World GK": [
+    {q:"Which is the largest continent by area?",o:["Africa","Asia","Europe","Australia"],a:1},
+    {q:"What is the capital of Japan?",o:["Seoul","Tokyo","Beijing","Bangkok"],a:1},
+    {q:"Which planet is known as the Red Planet?",o:["Venus","Mars","Jupiter","Saturn"],a:1},
+    {q:"Which ocean is the largest?",o:["Atlantic","Indian","Pacific","Arctic"],a:2},
+    {q:"How many days are in a leap year?",o:["364","365","366","367"],a:2}
+  ],
+  "India GK": [
+    {q:"When is India's Independence Day?",o:["26 January","15 August","2 October","14 November"],a:1},
+    {q:"What is the capital of India?",o:["Mumbai","Kolkata","New Delhi","Chennai"],a:2},
+    {q:"What is India's national animal?",o:["Lion","Tiger","Elephant","Leopard"],a:1},
+    {q:"Which is India's national anthem?",o:["Vande Mataram","Jana Gana Mana","Saare Jahan Se Achha","Jai Hind"],a:1},
+    {q:"What is the currency of India?",o:["Dollar","Rupee","Yen","Euro"],a:1}
+  ],
+  "Universe": [
+    {q:"Which star is closest to Earth?",o:["Sirius","The Sun","Polaris","Vega"],a:1},
+    {q:"Which planet is famous for its rings?",o:["Mars","Saturn","Mercury","Earth"],a:1},
+    {q:"How many planets are in our Solar System?",o:["7","8","9","10"],a:1},
+    {q:"What is Earth's natural satellite?",o:["The Sun","The Moon","Mars","Venus"],a:1},
+    {q:"Which planet is largest in our Solar System?",o:["Earth","Jupiter","Neptune","Mercury"],a:1}
+  ],
+  "Amazing Facts": [
+    {q:"Which mammal lays eggs?",o:["Platypus","Cat","Horse","Dolphin"],a:0},
+    {q:"Which is the fastest land animal?",o:["Lion","Cheetah","Horse","Wolf"],a:1},
+    {q:"What do bees collect from flowers?",o:["Sand","Nectar","Leaves only","Pebbles"],a:1},
+    {q:"Which planet is called the Blue Planet?",o:["Mars","Earth","Venus","Mercury"],a:1},
+    {q:"How many legs does a spider have?",o:["Six","Eight","Ten","Twelve"],a:1}
+  ],
+  "Spoken English": [
+    {q:"How do you greet someone in the morning?",o:["Good night","Good morning","Goodbye","See you yesterday"],a:1},
+    {q:"Choose the polite request.",o:["Give me it!","Could you help me, please?","You must now!","Move!"],a:1},
+    {q:"Complete: How ___ you?",o:["is","am","are","be"],a:2},
+    {q:"Choose the correct introduction.",o:["My name is Riya.","Me name Riya.","I name is Riya.","My names Riya."],a:0},
+    {q:"Choose the correct sentence.",o:["I am fine.","I is fine.","I are fine.","I be fine."],a:0}
+  ],
+  "Daily Sentences": [
+    {q:"Choose the correct sentence.",o:["I am going home.","I going home.","I is going home.","I are going home."],a:0},
+    {q:"Complete: Thank you ___ your help.",o:["for","at","on","from"],a:0},
+    {q:"Which is a polite way to ask for water?",o:["Water now!","May I have some water, please?","Give water!","You water me."],a:1},
+    {q:"Complete: See you ___.",o:["later","yesterday","last","before ago"],a:0},
+    {q:"Choose the correct sentence.",o:["I don't understand.","I doesn't understand.","I not understand.","I didn't understands."],a:0}
+  ],
+  "Self Introduction": [
+    {q:"Which sentence gives your name?",o:["My name is Sam.","I am name Sam.","Me name Sam.","Name my Sam."],a:0},
+    {q:"Complete: I ___ from India.",o:["is","am","are","be"],a:1},
+    {q:"Which sentence gives your age?",o:["I am 12 years old.","I have 12 years.","I age 12.","I is 12."],a:0},
+    {q:"Complete: I ___ in Class 5.",o:["study","studies","studying","studied every day now"],a:0},
+    {q:"Which is a polite ending?",o:["Thank you.","Go away.","Stop listening.","Never mind you."],a:0}
+  ],
+  "Conversation": [
+    {q:"A: How are you? B: ___",o:["I'm fine, thank you.","I am 10 years.","My name fine.","Yes, I are."],a:0},
+    {q:"A: Thank you! B: ___",o:["You're welcome.","Good morning yesterday.","I thank you are.","No, I am."],a:0},
+    {q:"A: What's your name? B: ___",o:["My name is Ali.","I am name Ali.","Name is me Ali.","I name Ali."],a:0},
+    {q:"A: Good morning! B: ___",o:["Good morning!","Good night!","Goodbye yesterday!","I am morning!"],a:0},
+    {q:"A: Can you help me? B: ___",o:["Of course!","I am help.","You help me are.","No you can."],a:0}
+  ]
+};
 
-  document.getElementById("home").style.display="none";
+const topicNames = [
+  ["Articles","📘","Practise a, an and the"],
+  ["Pronouns","👥","Practise pronouns"],
+  ["Prepositions","📍","Practise in, on, at and more"],
+  ["Tense","⏳","Practise English tenses"],
+  ["Verbs (V1/V2/V3)","🔤","Learn verb forms"],
+  ["Am / Is / Are","✏️","Practise helping verbs"],
+  ["Common Words","💬","Build your vocabulary"],
+  ["Synonyms","🔁","Words with similar meanings"],
+  ["Antonyms","↔️","Words with opposite meanings"],
+  ["Human Body","🫀","Science and body quiz"],
+  ["Plants","🌱","Explore plant facts"],
+  ["Animals","🐾","Learn about animals"],
+  ["Physics","⚡","Basic physics quiz"],
+  ["Basic Math","➕","Practise arithmetic"],
+  ["Fractions","🍕","Practise fractions"],
+  ["Decimals","🔢","Practise decimal numbers"],
+  ["Percentage","📊","Practise percentages"],
+  ["World GK","🌍","General knowledge"],
+  ["India GK","🇮🇳","Indian general knowledge"],
+  ["Universe","🪐","Explore space"],
+  ["Amazing Facts","💡","Test your knowledge"],
+  ["Spoken English","🗣️","Everyday English practice"],
+  ["Daily Sentences","📝","Useful daily sentences"],
+  ["Self Introduction","🙋","Introduce yourself"],
+  ["Conversation","💬","Practise short conversations"]
+];
+
+function buildTopicCards() {
+  const box = document.getElementById("topicCards");
+  box.innerHTML = "";
+  topicNames.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<div class="icon">${item[1]}</div><h3>${item[0]}</h3><p>${item[2]}</p>`;
+    card.onclick = () => startQuiz(item[0]);
+    box.appendChild(card);
+  });
+}
+
+function startQuiz(topic) {
+  currentTopic = topic;
+  currentQuestion = 0;
+  score = 0;
+  answered = false;
+  document.getElementById("home").style.display = "none";
+  document.getElementById("lessonPage").classList.remove("active");
   document.getElementById("quizPage").classList.add("active");
-
+  document.getElementById("quizTitle").textContent = topic + " Quiz";
   showQuestion();
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
 }
 
-function showQuestion(){
-  const item=quizData[currentTopic][currentQuestion];
+function showQuestion() {
+  const questions = quizData[currentTopic] || [];
+  const area = document.getElementById("quizArea");
 
-  let html="";
-  html+="<div class='quizbox'>";
-  html+="<div class='progress'>Question "+(currentQuestion+1)+" of "+quizData[currentTopic].length+"</div>";
-  html+="<div class='qtext'>"+item[0]+"</div>";
-
-  for(let i=1;i<=4;i++){
-    html+="<button class='option' id='opt"+(i-1)+"' onclick='checkAnswer("+(i-1)+")'>"+
-      String.fromCharCode(65+i-1)+") "+item[i]+
-      "</button>";
-  }
-
-  html+="<div id='result' class='result'></div>";
-  html+="<div class='score'>Score: "+score+"</div>";
-  html+="</div>";
-
-  document.getElementById("quizArea").innerHTML=html;
-  answered=false;
-}
-
-function checkAnswer(choice){
-  if(answered){
+  if (currentQuestion >= questions.length) {
+    area.innerHTML = `<div class="score">Your Score: ${score} / ${questions.length}</div>
+      <p style="text-align:center">Keep practising to improve your knowledge!</p>
+      <div style="text-align:center"><button class="restart" onclick="startQuiz(currentTopic)">Try Again</button>
+      <button class="back" onclick="goHome()">Home</button></div>`;
     return;
   }
 
-  answered=true;
+  answered = false;
+  const q = questions[currentQuestion];
+  area.innerHTML = `<p class="progress">Question ${currentQuestion + 1} of ${questions.length}</p>
+    <div class="quizbox"><div class="qtext">${q.q}</div>
+    <div id="options"></div><div id="feedback" class="result"></div></div>
+    <button id="nextBtn" class="back" style="display:none" onclick="nextQuestion()">Next Question →</button>`;
 
-  const item=quizData[currentTopic][currentQuestion];
-  const buttons=document.querySelectorAll(".option");
+  const options = document.getElementById("options");
+  q.o.forEach((option, index) => {
+    const btn = document.createElement("button");
+    btn.className = "option";
+    btn.textContent = String.fromCharCode(65 + index) + ") " + option;
+    btn.onclick = () => selectAnswer(index);
+    options.appendChild(btn);
+  });
+}
 
-  buttons.forEach(function(btn){
-    btn.disabled=true;
+function selectAnswer(index) {
+  if (answered) return;
+  answered = true;
+  const q = quizData[currentTopic][currentQuestion];
+  const buttons = document.querySelectorAll("#options .option");
+  buttons.forEach((btn, i) => {
+    btn.disabled = true;
+    if (i === q.a) btn.classList.add("correct");
+    if (i === index && index !== q.a) btn.classList.add("wrong");
   });
 
-  if(choice===item[5]){
+  const feedback = document.getElementById("feedback");
+  if (index === q.a) {
     score++;
-    document.getElementById("opt"+choice).classList.add("correct");
-    document.getElementById("result").innerHTML="✅ Correct Answer!";
-  }else{
-    document.getElementById("opt"+choice).classList.add("wrong");
-    document.getElementById("opt"+item[5]).classList.add("correct");
-    document.getElementById("result").innerHTML="❌ Wrong Answer!";
+    feedback.textContent = "✅ Correct! Well done!";
+  } else {
+    feedback.textContent = "❌ Not quite. The correct answer is: " + q.o[q.a];
   }
-
-  setTimeout(function(){
-    currentQuestion++;
-
-    if(currentQuestion<quizData[currentTopic].length){
-      showQuestion();
-    }else{
-      showFinalScore();
-    }
-  },1000);
+  document.getElementById("nextBtn").style.display = "inline-block";
 }
 
-function showFinalScore(){
-  let total=quizData[currentTopic].length;
-
-  let html="";
-  html+="<div class='quizbox final'>";
-  html+="<h2>🎉 Quiz Completed!</h2>";
-  html+="<h3>"+currentTopic+"</h3>";
-  html+="<p>Your Score</p>";
-  html+="<h1>"+score+" / "+total+"</h1>";
-
-  if(score===total){
-    html+="<p>🏆 Perfect Score!</p>";
-  }else if(score>=total/2){
-    html+="<p>👏 Good Job!</p>";
-  }else{
-    html+="<p>💪 Keep Practicing!</p>";
-  }
-
-  html+="<button class='try' onclick='startQuiz("+JSON.stringify(currentTopic)+")'>Try Again</button>";
-  html+="<button class='try' onclick='showHome()'>Back to Home</button>";
-  html+="</div>";
-
-  document.getElementById("quizArea").innerHTML=html;
+function nextQuestion() {
+  currentQuestion++;
+  showQuestion();
 }
 
-buildHome();
-
-</script>
-
-</body>
+buildTopicCards();
+  </script>
+  </body>
 </html>
